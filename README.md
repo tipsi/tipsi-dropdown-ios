@@ -1,6 +1,6 @@
 # TPSDropDown
 
-[![CI Status](http://img.shields.io/travis/Sergey Yuzepovich/TPSDropDown.svg?style=flat)](https://travis-ci.org/Sergey Yuzepovich/TPSDropDown)
+[![CI Status](https://img.shields.io/travis/tipsi/tipsi-dropdown.svg?style=flat)](https://travis-ci.org/tipsi/tipsi-dropdown)
 [![Version](https://img.shields.io/cocoapods/v/TPSDropDown.svg?style=flat)](http://cocoapods.org/pods/TPSDropDown)
 [![License](https://img.shields.io/cocoapods/l/TPSDropDown.svg?style=flat)](http://cocoapods.org/pods/TPSDropDown)
 [![Platform](https://img.shields.io/cocoapods/p/TPSDropDown.svg?style=flat)](http://cocoapods.org/pods/TPSDropDown)
@@ -13,11 +13,11 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
-TPSDropDown is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+TPSDropDown is *not yet* available through [CocoaPods](http://cocoapods.org). To install
+it directly from this repo, simply add the following line to your Podfile:
 
 ```ruby
-pod "TPSDropDown"
+    pod 'TPSDropDown', :git => 'https://github.com/tipsi/tipsi-dropdown.git'
 ```
 
 ## Author
