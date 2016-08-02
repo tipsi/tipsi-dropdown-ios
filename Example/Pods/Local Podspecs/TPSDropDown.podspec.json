@@ -1,0 +1,29 @@
+{
+  "name": "TPSDropDown",
+  "version": "0.1.0",
+  "summary": "A short description of TPSDropDown.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/TPSDropDown",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Tipsi team": "support@gettipsi.com"
+  },
+  "source": {
+    "git": "https://github.com/tipsi/tipsi-dropdown.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "TPSDropDown/Classes/**/*",
+  "resources": "TPSDropDown/Assets/*.xcassets",
+  "frameworks": "UIKit",
+  "dependencies": {
+    "pop": [
+      "1.0.9"
+    ]
+  }
+}

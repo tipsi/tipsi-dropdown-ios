@@ -1,0 +1,6 @@
+framework module TPSDropDown {
+  umbrella header "TPSDropDown-umbrella.h"
+
+  export *
+  module * { export * }
+}
