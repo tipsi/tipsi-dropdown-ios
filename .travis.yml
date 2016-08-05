@@ -1,7 +1,4 @@
 language: objective-c
-before_install:
-    - brew update
-    - brew install xctool
 xcode_workspace: Example/TPSDropDown.xcworkspace
 xcode_scheme: TPSDropDown-Example
 
