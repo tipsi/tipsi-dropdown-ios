@@ -1,5 +1,2 @@
 language: objective-c
-xcode_workspace: Example/TPSDropDown.xcworkspace
-xcode_scheme: TPSDropDown-Example
-xcode_sdk: iphonesimulator9.3
-script: xctool -workspace TPSDropDown.xcworkspace -scheme TPSDropDown-Example test -test-sdk iphonesimulator9.3 CODE_SIGNING_REQUIRED=NO
+script: xctool -workspace Example/TPSDropDown.xcworkspace -scheme TPSDropDown-Example test -test-sdk iphonesimulator9.3 CODE_SIGNING_REQUIRED=NO
