@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
 A set of classes defining dropdown element used in Tipsi app.
                        DESC
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/TPSDropDown'
+  s.homepage         = 'https://github.com/tipsi/tipsi-dropdown'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Tipsi team' => 'support@gettipsi.com' }
   s.source           = { :git => 'https://github.com/tipsi/tipsi-dropdown.git', :tag => s.version.to_s }
