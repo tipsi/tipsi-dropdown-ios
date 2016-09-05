@@ -18,8 +18,8 @@
         self.layer.cornerRadius = CGRectGetHeight(self.frame)/2;
         
         NSBundle *currentBundle = [NSBundle bundleForClass:self.class];
-        NSURL *bundleURL = [currentBundle.resourceURL URLByAppendingPathComponent:@"TPSDropDown.bundle"];
-        NSBundle *resourceBundle = [NSBundle bundleWithURL:bundleURL];
+        NSString *resourceBundlePath = [currentBundle pathForResource:@"TPSDropDown" ofType:@"bundle"];
+        NSBundle *resourceBundle = [NSBundle bundleWithPath:resourceBundlePath];
         
         UIImage *arrow = [UIImage imageNamed:@"down-arrow-white" inBundle:resourceBundle compatibleWithTraitCollection:nil];
         [self initArrowWithImage:arrow];

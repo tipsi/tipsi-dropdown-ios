@@ -25,8 +25,8 @@ static const NSUInteger ARROW_H = 6;
         self.layer.cornerRadius = 0.f;
         
         NSBundle *currentBundle = [NSBundle bundleForClass:self.class];
-        NSURL *bundleURL = [currentBundle.resourceURL URLByAppendingPathComponent:@"TPSDropDown.bundle"];
-        NSBundle *resourceBundle = [NSBundle bundleWithURL:bundleURL];
+        NSString *resourceBundlePath = [currentBundle pathForResource:@"TPSDropDown" ofType:@"bundle"];
+        NSBundle *resourceBundle = [NSBundle bundleWithPath:resourceBundlePath];
         
         UIImage *arrow = [UIImage imageNamed:@"arrow" inBundle:resourceBundle compatibleWithTraitCollection:nil];
         [self initArrowWithImage:arrow];
