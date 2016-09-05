@@ -16,7 +16,12 @@
     if (self) {
         self.layer.borderWidth = 1;
         self.layer.cornerRadius = CGRectGetHeight(self.frame)/2;
-        UIImage *arrow = [UIImage imageNamed:@"down-arrow-white"];
+        
+        NSBundle *currentBundle = [NSBundle bundleForClass:self.class];
+        NSURL *bundleURL = [currentBundle.resourceURL URLByAppendingPathComponent:@"TPSDropDown.bundle"];
+        NSBundle *resourceBundle = [NSBundle bundleWithURL:bundleURL];
+        
+        UIImage *arrow = [UIImage imageNamed:@"down-arrow-white" inBundle:resourceBundle compatibleWithTraitCollection:nil];
         [self initArrowWithImage:arrow];
     }
     return self;

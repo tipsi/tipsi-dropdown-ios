@@ -23,7 +23,12 @@ static const NSUInteger ARROW_H = 6;
         self.layer.borderWidth = 1.f;
         self.layer.borderColor = [UIColor colorWithRed:232.f/255 green:228.f/255 blue:223.f/255 alpha:1.f].CGColor;
         self.layer.cornerRadius = 0.f;
-        UIImage *arrow = [UIImage imageNamed:@"arrow"];
+        
+        NSBundle *currentBundle = [NSBundle bundleForClass:self.class];
+        NSURL *bundleURL = [currentBundle.resourceURL URLByAppendingPathComponent:@"TPSDropDown.bundle"];
+        NSBundle *resourceBundle = [NSBundle bundleWithURL:bundleURL];
+        
+        UIImage *arrow = [UIImage imageNamed:@"arrow" inBundle:resourceBundle compatibleWithTraitCollection:nil];
         [self initArrowWithImage:arrow];
     }
     return self;
