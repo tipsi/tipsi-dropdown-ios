@@ -23,5 +23,5 @@ A set of classes defining dropdown element used in Tipsi app.
   s.source_files = 'TPSDropDown/Classes/**/*'
   s.frameworks = 'UIKit'
   s.dependency 'pop', '1.0.9'
-  s.resource_bundles = { 'TPSDropDown' => ['TPSDropDown/TPSDropDown.bundle'] }
+  s.resources = 'TPSDropDown/TPSDropDown.bundle'
 end
