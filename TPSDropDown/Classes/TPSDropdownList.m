@@ -176,6 +176,11 @@ static const NSUInteger LABEL_TAG = 1111;
       [v removeFromSuperview];
     }
   }
+    
+    NSBundle *currentBundle = [NSBundle bundleForClass:self.class];
+    NSString *resourceBundlePath = [currentBundle pathForResource:@"TPSDropDown" ofType:@"bundle"];
+    NSBundle *resourceBundle = [NSBundle bundleWithPath:resourceBundlePath];
+    
   for (int i = 0; i < self.data.count; i++) {
       
       UIImageView *iconImageView = iconImageView = [self iconImageViewAtIndex:i];
@@ -201,7 +206,7 @@ static const NSUInteger LABEL_TAG = 1111;
     [self addSubview:lbl];
     
     if (self.showCheckmark && [self.selectedElement isEqual:self.data[i]] && i != 0) {
-      UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ico_checkmark_light"]];
+      UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ico_checkmark_light" inBundle:resourceBundle compatibleWithTraitCollection:nil]];
       imageView.frame = (CGRect){CGPointMake(CGRectGetWidth(lblRect) - CGRectGetWidth(imageView.frame) - 20.f, (CGRectGetHeight(lblRect) - CGRectGetHeight(imageView.frame)) / 2.f), imageView.frame.size};
       [lbl addSubview:imageView];
     }
