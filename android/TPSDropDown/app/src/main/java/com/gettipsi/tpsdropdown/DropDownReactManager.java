@@ -12,7 +12,7 @@ import com.facebook.react.uimanager.ThemedReactContext;
 import com.facebook.react.uimanager.ViewProps;
 import com.facebook.react.uimanager.annotations.ReactProp;
 
-public class DropDownReactManager extends SimpleViewManager<DropdownContainer> {
+public class DropdownReactManager extends SimpleViewManager<DropdownContainer> {
 
     private static final String REACT_CLASS_NAME = "TPSDropDown";
 

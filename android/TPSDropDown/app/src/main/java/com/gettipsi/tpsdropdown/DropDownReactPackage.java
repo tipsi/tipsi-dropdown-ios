@@ -11,7 +11,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public class DropDownReactPackage implements ReactPackage {
+public class DropdownReactPackage implements ReactPackage {
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
         return new ArrayList<>();
@@ -25,7 +25,7 @@ public class DropDownReactPackage implements ReactPackage {
     @Override
     public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
         return Arrays.<ViewManager>asList(
-                new DropDownReactManager()
+                new DropdownReactManager()
         );
     }
 }
