@@ -6,8 +6,6 @@ import android.view.Gravity;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
-import com.facebook.react.uimanager.ThemedReactContext;
-
 public class DropdownContainer extends FrameLayout {
 
     private Dropdown dropdown;
@@ -28,9 +26,10 @@ public class DropdownContainer extends FrameLayout {
     }
 
     private void initDropdown() {
-        dropdown = new Dropdown((ThemedReactContext) getContext());
+        dropdown = new Dropdown(getContext());
         ViewGroup.LayoutParams params = new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT, Gravity.LEFT);
+        dropdown.setId(R.id.dropdownId);
         dropdown.setLayoutParams(params);
         addView(dropdown);
     }
