@@ -57,9 +57,7 @@ public class DropdownTests {
 
     @Test
     public void checkItemsSelection() {
-        onView(withId(R.id.dropdownId))
-                .perform(new SetupElementsAction(items))
-                .check(ViewAssertions.matches(DropdownMatcher.withListSize(items.size())));
+        setupItems();
 
         onView(withId(R.id.dropdownId))
                 .perform(new SetSelectedAction(0))
@@ -85,10 +83,7 @@ public class DropdownTests {
 
     @Test
     public void checkItemsWithNameSelection() {
-        onView(withId(R.id.dropdownId))
-                .perform(new SetupElementsAction(items))
-                .check(ViewAssertions.matches(DropdownMatcher.withListSize(items.size())));
-
+        setupItems();
         onView(withId(R.id.dropdownId))
                 .perform(new SelectElementWithNameAction(items.get(0).toString()))
                 .check(matches(withSpinnerText(items.get(0).toString())));
@@ -113,6 +108,7 @@ public class DropdownTests {
 
     @Test
     public void checkItemsClickSelection() {
+        setupItems();
         String item = items.get(0).toString();
         onView(withId(R.id.dropdownId)).perform(click());
         onData(allOf(is(instanceOf(String.class)), is(item))).perform(click());
@@ -132,6 +128,12 @@ public class DropdownTests {
         onView(withId(R.id.dropdownId)).perform(click());
         onData(allOf(is(instanceOf(String.class)), is(item3))).perform(click());
         onView(withId(R.id.dropdownId)).check(matches(withSpinnerText(containsString(item3))));
+    }
+
+    private void setupItems() {
+        onView(withId(R.id.dropdownId))
+                .perform(new SetupElementsAction(items))
+                .check(ViewAssertions.matches(DropdownMatcher.withListSize(items.size())));
     }
 
 }
