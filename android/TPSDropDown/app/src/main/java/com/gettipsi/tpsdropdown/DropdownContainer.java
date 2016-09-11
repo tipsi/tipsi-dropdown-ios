@@ -28,7 +28,7 @@ public class DropdownContainer extends FrameLayout {
     private void initDropdown() {
         dropdown = new Dropdown(getContext());
         ViewGroup.LayoutParams params = new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
-                ViewGroup.LayoutParams.WRAP_CONTENT, Gravity.LEFT);
+                ViewGroup.LayoutParams.WRAP_CONTENT, Gravity.START);
         dropdown.setId(R.id.dropdownId);
         dropdown.setLayoutParams(params);
         addView(dropdown);
