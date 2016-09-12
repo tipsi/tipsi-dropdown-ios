@@ -19,7 +19,7 @@ public class Adapter extends ArrayAdapter<Object> {
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder holder;
         if (convertView == null) {
-            convertView = LayoutInflater.from(getContext()).inflate(android.R.layout.simple_list_item_1, parent, false);
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.dropdown_line, parent, false);
             holder = new ViewHolder(convertView);
             convertView.setTag(holder);
         } else {
@@ -33,7 +33,7 @@ public class Adapter extends ArrayAdapter<Object> {
         TextView text;
 
         public ViewHolder(View view) {
-            text = (TextView) view.findViewById(android.R.id.text1);
+            text = (TextView) view.findViewById(R.id.dropdownTextItemId);
         }
     }
 }
