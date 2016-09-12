@@ -15,13 +15,13 @@ Pod::Spec.new do |s|
 A set of classes defining dropdown element used in Tipsi app.
                        DESC
 
-  s.homepage         = 'https://github.com/tipsi/tipsi-dropdown/ios'
+  s.homepage         = 'https://github.com/tipsi/tipsi-dropdown'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Tipsi team' => 'support@gettipsi.com' }
   s.source           = { :git => 'https://github.com/tipsi/tipsi-dropdown.git', :tag => s.version.to_s }
   s.ios.deployment_target = '8.0'
-  s.source_files = 'ios/TPSDropDown/Classes/**/*'
+  s.source_files = 'TPSDropDown/Classes/**/*'
   s.frameworks = 'UIKit'
   s.dependency 'pop', '1.0.9'
-  s.resources = 'ios/TPSDropDown/TPSDropDown.bundle'
+  s.resources = 'TPSDropDown/TPSDropDown.bundle'
 end
