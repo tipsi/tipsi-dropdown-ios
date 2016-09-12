@@ -20,8 +20,8 @@ A set of classes defining dropdown element used in Tipsi app.
   s.author           = { 'Tipsi team' => 'support@gettipsi.com' }
   s.source           = { :git => 'https://github.com/tipsi/tipsi-dropdown.git', :tag => s.version.to_s }
   s.ios.deployment_target = '8.0'
-  s.source_files = 'TPSDropDown/Classes/**/*'
+  s.source_files = 'ios/TPSDropDown/Classes/**/*'
   s.frameworks = 'UIKit'
   s.dependency 'pop', '1.0.9'
-  s.resources = 'TPSDropDown/TPSDropDown.bundle'
+  s.resources = 'ios/TPSDropDown/TPSDropDown.bundle'
 end
