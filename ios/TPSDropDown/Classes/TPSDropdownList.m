@@ -74,14 +74,12 @@ static const NSUInteger LABEL_TAG = 1111;
 }
 
 - (void)didMoveToWindow {
-#warning This code shuold be replaced with better implementation
   dispatch_once(&_onceToken, ^{
     [self setupGestures];
   });
 }
 
 -(void)setupGestures{
-#warning This code shuold be replaced with better implementation
     UIView *masterView = self.superview;  // TODO : Make this better!!!
     while (CGRectGetHeight(masterView.frame) < CGRectGetHeight([UIScreen mainScreen].bounds) - 100.f) {
       masterView = masterView.superview;
