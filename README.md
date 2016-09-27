@@ -29,9 +29,10 @@ In near future dropdown will support customization using the following format (j
 	"borderWidth":2,
 	"borderColor":"0xFFFFFF",
 	"cornerRadius":10,
-	"separatorWidth":1,
+	"separatorHeight":1,
 	"separatorColor":"0xAAAAAA",
 	"fontName":"Arial",
+	"fontSize":15,
 	"textColor":"0xCCCCCC",
 	"textAlignment":"Left"|"Right"|"Center",
 	"indicatorImageName":"customTriangle.png"|nil
