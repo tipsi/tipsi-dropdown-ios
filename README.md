@@ -19,6 +19,26 @@ TPSDropDown is available via [CocoaPods](http://cocoapods.org). To install it ad
     pod 'TPSDropDown'
 ```
 
+## Customization
+In near future dropdown will support customization using the following format (json):
+
+```json
+{
+"style":
+	{"backgroundColor":"0x000000",
+	"borderWidth":2,
+	"borderColor":"0xFFFFFF",
+	"cornerRadius":10,
+	"separatorWidth":1,
+	"separatorColor":"0xAAAAAA",
+	"fontName":"Arial",
+	"textColor":"0xCCCCCC",
+	"textAlignment":"Left"|"Right"|"Center",
+	"indicatorImageName":"customTriangle.png"|nil
+	}
+}
+```
+
 ## Author
 
 Tipsi team
