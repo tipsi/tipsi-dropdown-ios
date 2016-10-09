@@ -9,7 +9,4 @@
 #import "TPSDropdownList.h"
 
 @interface TPSSquareDropdown : TPSDropdownList
-@property (nonatomic, strong) UIColor *labelColor;
-@property (nonatomic, strong) UIFont *labelFont;
-@property (nonatomic, assign) CGFloat offsetX;
 @end

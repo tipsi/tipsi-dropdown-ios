@@ -16,7 +16,7 @@
     if (self) {
         [self applyStyleDictionary:@{@"cornerRadius":@(CGRectGetHeight(self.frame)/2),
                                      @"backgroundColor":@"0xAAAAAA",
-                                     @"borderWidth":@(1),
+                                     @"borderWidth":@(0),
                                      @"separatorHeight":@(1),
                                      @"fontName":@"ProximaNova-Semibold",
                                      @"fontSize":@(14),
@@ -24,6 +24,7 @@
                                      @"separatorColor":@"0xAAAAAA",
                                      @"textAlignment":@"Left",
                                      @"indicatorImageName":@"down-arrow-white"}];
+        
     }
     return self;
 }

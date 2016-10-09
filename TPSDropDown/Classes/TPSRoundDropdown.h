@@ -6,8 +6,8 @@
 //  Copyright © 2016 tipsi. All rights reserved.
 //
 
-#import "TPSSquareDropdown.h"
+#import "TPSDropdownList.h"
 
-@interface TPSRoundDropdown : TPSSquareDropdown
+@interface TPSRoundDropdown : TPSDropdownList
 
 @end

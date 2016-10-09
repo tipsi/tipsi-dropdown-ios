@@ -71,14 +71,13 @@
 #define MAX_HEIGHT (CGRectGetHeight([UIScreen mainScreen].bounds)-CGRectGetMinY([self convertRect:self.bounds toView:nil])-20)
 #define DECELERATE_ANIMATION_KEY @"decelerate"
 static const NSUInteger LABEL_TAG = 1111;
-
+static const NSUInteger SEPARATOR_TAG = 2222;
 @implementation TPSDropdownList
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder{
     self = [super initWithCoder:aDecoder];
     if (self) {
         [self setup];
-        [self applyStyleDictionary:@{@"backgroundColor":@"0xAAAAAA"}];
     }
     return self;
 }
@@ -87,7 +86,6 @@ static const NSUInteger LABEL_TAG = 1111;
     self = [super initWithFrame:frame];
     if(self){
         [self setup];
-        [self applyStyleDictionary:@{@"backgroundColor":@"0xAAAAAA"}];
     }
     return self;
 }
@@ -103,7 +101,7 @@ static const NSUInteger LABEL_TAG = 1111;
 -(void)updateArrowFrame{
     static int ARROW_W=0, ARROW_H=0;
     if(ARROW_W == 0 || ARROW_H == 0){
-        ARROW_W = ARROW_H = CGRectGetHeight(self.frame)/3;
+        ARROW_W = ARROW_H = CGRectGetHeight(self.frame)/4;
     }
     self.arrowView.frame = CGRectMake(CGRectGetWidth(self.frame)-ARROW_W*2,
                                       [self elementHeight]/2 - ARROW_H/2,
@@ -114,6 +112,12 @@ static const NSUInteger LABEL_TAG = 1111;
 -(void)layoutSubviews{
     [super layoutSubviews];
     [self updateArrowFrame];
+    for (UIView* v in self.subviews) {
+        if(v.tag == LABEL_TAG){
+            v.frame = CGRectMake(CGRectGetMinX(v.frame),CGRectGetMinY(v.frame), CGRectGetWidth(self.frame)-20, [self elementHeight]);
+        }
+    }
+
 }
 
 - (NSDictionary*)jsonToDictionary:(NSString*)json{
@@ -136,6 +140,7 @@ static const NSUInteger LABEL_TAG = 1111;
 - (void)applyStyleDictionary:(NSDictionary*)dictStyles{
     self.styleProps = [[TPSDropdownStyleProperties alloc]initWithDictionary:dictStyles];
     [self setup];
+    [self buildWithElements:self.data];
 }
 
 + (instancetype)dropdownWithStyle:(NSString*)jsonStyles{
@@ -285,7 +290,7 @@ static const NSUInteger LABEL_TAG = 1111;
   }
   
   for (UIView* v in self.subviews) {
-    if(v.tag == LABEL_TAG){
+    if(v.tag == LABEL_TAG || v.tag == SEPARATOR_TAG){
       [v removeFromSuperview];
     }
   }
@@ -326,7 +331,7 @@ static const NSUInteger LABEL_TAG = 1111;
     
     int lineHeight = self.styleProps && self.styleProps.separatorHeight ? self.styleProps.separatorHeight.intValue : 1;
     UIView *line = [[UIView alloc]initWithFrame:CGRectMake(0, (i+1)*[self elementHeight], CGRectGetWidth(self.frame), lineHeight)];
-    line.tag = LABEL_TAG;
+    line.tag = SEPARATOR_TAG;
     [line setBackgroundColor: self.styleProps && self.styleProps.separatorColor ? self.styleProps.separatorColor : [UIColor grayColor]];
     line.alpha = 0.5;
     [self addSubview:line];
