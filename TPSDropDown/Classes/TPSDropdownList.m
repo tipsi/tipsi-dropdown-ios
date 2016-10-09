@@ -8,6 +8,46 @@
 
 #import "TPSDropdownList.h"
 #import <pop/POP.h>
+#import <Foundation/NSJSONSerialization.h>
+#import "UIColor+UIColorAdditions.h"
+
+@interface TPSDropdownStyleProperties : NSObject
+@property(nonatomic,strong) UIColor *backgroundColor;
+@property(nonatomic,strong) NSNumber *borderWidth;
+@property(nonatomic,strong) UIColor *borderColor;
+@property(nonatomic,strong) NSNumber *cornerRadius;
+@property(nonatomic,strong) NSNumber *separatorHeight;
+@property(nonatomic,strong) UIColor *separatorColor;
+@property(nonatomic,strong) NSString *fontName;
+@property(nonatomic,strong) NSNumber *fontSize;
+@property(nonatomic,strong) UIColor *textColor;
+@property(nonatomic,strong) NSString *textAlignment;
+@property(nonatomic,strong) NSString *indicatorImageName;
+@end
+
+@implementation TPSDropdownStyleProperties
+
+-(instancetype)initWithDictionary:(NSDictionary*)styleDictionary{
+    self = [super init];
+    if(self){
+        for (NSString *key in styleDictionary.allKeys) {
+            [self setValue: [self getPropertyValue:key fromVaue:styleDictionary[key]] forKey:key];
+        }
+    }
+    return self;
+}
+
+-(NSObject *)getPropertyValue:(NSString*)key fromVaue:(NSObject*)val{
+    static UIFont *font = nil;
+    if([key isEqualToString:@"backgroundColor"] ||
+       [key isEqualToString:@"borderColor"] ||
+       [key isEqualToString:@"separatorColor"] ||
+       [key isEqualToString:@"textColor"]){
+        return [UIColor colorWithHexString:val];
+    }
+    return val;
+}
+@end
 
 @interface TPSDropdownList()<UIGestureRecognizerDelegate>
 @property(nonatomic) BOOL expanded;
@@ -24,6 +64,8 @@
 @property(nonatomic) dispatch_once_t onceToken;
 @property(nonatomic) CGFloat initialY;
 @property(readwrite, assign, nonatomic) NSUInteger selectedIndex;
+@property (nonatomic,strong) TPSDropdownStyleProperties *styleProps;
+@property(nonatomic,weak) UIImageView *arrowView;
 @end
 
 #define MAX_HEIGHT (CGRectGetHeight([UIScreen mainScreen].bounds)-CGRectGetMinY([self convertRect:self.bounds toView:nil])-20)
@@ -32,26 +74,99 @@ static const NSUInteger LABEL_TAG = 1111;
 
 @implementation TPSDropdownList
 
--(instancetype)initWithCoder:(NSCoder *)aDecoder{
+- (instancetype)initWithCoder:(NSCoder *)aDecoder{
     self = [super initWithCoder:aDecoder];
     if (self) {
         [self setup];
+        [self applyStyleDictionary:@{@"backgroundColor":@"0xAAAAAA"}];
     }
     return self;
 }
 
--(instancetype)initWithFrame:(CGRect)frame{
+- (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if(self){
         [self setup];
+        [self applyStyleDictionary:@{@"backgroundColor":@"0xAAAAAA"}];
     }
     return self;
 }
 
+-(void)initArrowWithImage:(UIImage*)arrowImage{
+    [self.arrowView removeFromSuperview];
+    UIImageView *imgView = [[UIImageView alloc]initWithImage:arrowImage];
+    [self addSubview:imgView];
+    self.arrowView = imgView;
+    [self updateArrowFrame];
+}
+
+-(void)updateArrowFrame{
+    static int ARROW_W=0, ARROW_H=0;
+    if(ARROW_W == 0 || ARROW_H == 0){
+        ARROW_W = ARROW_H = CGRectGetHeight(self.frame)/3;
+    }
+    self.arrowView.frame = CGRectMake(CGRectGetWidth(self.frame)-ARROW_W*2,
+                                      [self elementHeight]/2 - ARROW_H/2,
+                                      ARROW_W,
+                                      ARROW_H);
+}
+
+-(void)layoutSubviews{
+    [super layoutSubviews];
+    [self updateArrowFrame];
+}
+
+- (NSDictionary*)jsonToDictionary:(NSString*)json{
+    NSError *error;
+    NSData *objectData = [json dataUsingEncoding:NSUTF8StringEncoding];
+    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:objectData
+                                                         options:NSJSONReadingMutableContainers
+                                                           error:&error];
+    if(error){
+        NSLog(@"Error converting json to dict: %@",error);
+    }
+    return dict;
+}
+
+- (void)applyStyleJson:(NSString*)jsonStyles{
+    NSDictionary *dict = [self jsonToDictionary:jsonStyles][@"style"];
+    [self applyStyleDictionary:dict];
+}
+
+- (void)applyStyleDictionary:(NSDictionary*)dictStyles{
+    self.styleProps = [[TPSDropdownStyleProperties alloc]initWithDictionary:dictStyles];
+    [self setup];
+}
+
++ (instancetype)dropdownWithStyle:(NSString*)jsonStyles{
+// Expected json format:
+//    {
+//        "style":
+//        {"backgroundColor":"0x000000",                        +   +
+//            "borderWidth":2,                                  +   +
+//            "borderColor":"0xFFFFFF",                         +   +
+//            "cornerRadius":10,                                +   +
+//            "separatorHeight":1,                              +   +
+//            "separatorColor":"0xAAAAAA",                      +   +
+//            "fontName":"Arial",                               +   +
+//            "fontSize":15,                                    +   +
+//            "textColor":"0xCCCCCC",                           +   +
+//            "textAlignment":"Left"|"Right"|"Center",          +   +
+//            "indicatorImageName":"customTriangle.png"|nil     +   +
+//        }
+//    }
+    TPSDropdownList *dropdown = [[TPSDropdownList alloc]initWithFrame:CGRectZero];
+    [dropdown applyStyleJson:jsonStyles];
+    return dropdown;
+}
+
 - (void)setup{
-    self.layer.borderColor = [UIColor grayColor].CGColor;
-    self.layer.borderWidth = 1;
-    self.layer.cornerRadius = 5;
+    if(self.styleProps && self.styleProps.backgroundColor){
+        self.backgroundColor =  self.styleProps.backgroundColor;
+    }
+    self.layer.borderColor = self.styleProps && self.styleProps.borderColor ? self.styleProps.borderColor.CGColor : [UIColor whiteColor].CGColor;
+    self.layer.borderWidth =  self.styleProps && self.styleProps.borderWidth ? [self.styleProps.borderWidth intValue] : 0;
+    self.layer.cornerRadius =  self.styleProps && self.styleProps.cornerRadius ? [self.styleProps.cornerRadius intValue] : 0;
     self.clipsToBounds = YES;
     self.initialHeight = CGRectGetHeight(self.frame);
     self.showCheckmark = NO;
@@ -65,6 +180,11 @@ static const NSUInteger LABEL_TAG = 1111;
             [obj setOffsetProperty:CGPointMake(values[0],values[1])];
         };
     }];
+    
+    if(self.styleProps && self.styleProps.indicatorImageName && self.styleProps.indicatorImageName != [NSNull null]){
+        UIImage *arrow = [UIImage imageNamed:self.styleProps.indicatorImageName];
+        [self initArrowWithImage:arrow];
+    }
 }
 
 - (void)setUserInteractionEnabled:(BOOL)userInteractionEnabled {
@@ -79,12 +199,11 @@ static const NSUInteger LABEL_TAG = 1111;
   });
 }
 
--(void)setupGestures{
-    UIView *masterView = self.superview;  // TODO : Make this better!!!
+- (void)setupGestures{
+    UIView *masterView = self.superview;
     while (CGRectGetHeight(masterView.frame) < CGRectGetHeight([UIScreen mainScreen].bounds) - 100.f) {
-      masterView = masterView.superview;
+        masterView = masterView.superview;
     }
-  
     UILongPressGestureRecognizer *anyGest = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(hide:)];
     anyGest.allowableMovement = 1000;
     anyGest.minimumPressDuration = 0;
@@ -102,14 +221,14 @@ static const NSUInteger LABEL_TAG = 1111;
   return self.expanded || [self pointInside:[gestureRecognizer locationInView:self] withEvent:nil];
 }
 
--(BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldBeRequiredToFailByGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer{
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldBeRequiredToFailByGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer{
     if(gestureRecognizer == self.scrollGesture){
         return YES;
     }
     return NO;
 }
 
--(void)scroll:(UIPanGestureRecognizer*)pan{
+- (void)scroll:(UIPanGestureRecognizer*)pan{
     if(!self.expanded){
         return;
     }
@@ -141,11 +260,11 @@ static const NSUInteger LABEL_TAG = 1111;
     }
 }
 
--(void)cancelDecay{
+- (void)cancelDecay{
     [self pop_removeAllAnimations];
 }
 
--(void)hide:(UIGestureRecognizer*)gesture{
+- (void)hide:(UIGestureRecognizer*)gesture{
     if(gesture.state == UIGestureRecognizerStateEnded){
         if(self.expanded && [self pointInside:[gesture locationInView:self] withEvent:nil]){
             [self cancelDecay];
@@ -155,15 +274,11 @@ static const NSUInteger LABEL_TAG = 1111;
     }
 }
 
--(void)layoutSubviews{
-    [super layoutSubviews];
-}
-
 - (void)resetFirstElement {
     self.firstElement = nil;
 }
 
--(void)buildWithElements:(NSArray *)rows {
+- (void)buildWithElements:(NSArray *)rows {
   self.data = [NSMutableArray arrayWithArray: rows];
   if(self.firstElement == nil){
     self.firstElement = self.data.firstObject;
@@ -209,48 +324,70 @@ static const NSUInteger LABEL_TAG = 1111;
       [lbl addSubview:imageView];
     }
     
-    UIView *line = [[UIView alloc]initWithFrame:CGRectMake(0, (i+1)*[self elementHeight], CGRectGetWidth(self.frame), 1)];
+    int lineHeight = self.styleProps && self.styleProps.separatorHeight ? self.styleProps.separatorHeight.intValue : 1;
+    UIView *line = [[UIView alloc]initWithFrame:CGRectMake(0, (i+1)*[self elementHeight], CGRectGetWidth(self.frame), lineHeight)];
     line.tag = LABEL_TAG;
-    [line setBackgroundColor:[UIColor lightGrayColor]];
+    [line setBackgroundColor: self.styleProps && self.styleProps.separatorColor ? self.styleProps.separatorColor : [UIColor grayColor]];
     line.alpha = 0.5;
     [self addSubview:line];
   }
 
 }
 
--(void)setupWithElements:(NSArray*)rows {
+- (void)setupWithElements:(NSArray*)rows {
   self.selectedElement = nil;
+  self.userInteractionEnabled = !(CGRectGetMinY(self.frame) < 0);
+  [self updateArrowFrame];
   [self buildWithElements:rows];
+  [self setup];
 }
 
 - (UIImageView*)iconImageViewAtIndex:(NSInteger)index {
     return nil;
 }
 
--(CGFloat)customXoffsetAtIndex:(NSInteger)index {
+- (CGFloat)customXoffsetAtIndex:(NSInteger)index {
     return 10;
 }
--(CGFloat)customYoffset {
-    return 0;
+- (CGFloat)customYoffset {
+    return 1;
 }
 
--(NSUInteger)textAlignment{
+- (NSUInteger)textAlignment{
+    if(self.styleProps && self.styleProps.textAlignment){
+        if([self.styleProps.textAlignment isEqualToString:@"Left"]){
+            return NSTextAlignmentLeft;
+        }
+        if([self.styleProps.textAlignment isEqualToString:@"Right"]){
+            return NSTextAlignmentRight;
+        }
+        if([self.styleProps.textAlignment isEqualToString:@"Center"]){
+            return NSTextAlignmentCenter;
+        }
+    }
     return NSTextAlignmentCenter;
 }
 
--(NSUInteger)elementHeight{
+- (NSUInteger)elementHeight{
     return self.initialHeight;
 }
 
--(UIFont*)labelFont:(NSUInteger)labelIdx{
+- (UIFont*)labelFont:(NSUInteger)labelIdx{
+    if(self.styleProps.fontName && self.styleProps.fontSize){
+        return [UIFont fontWithName:self.styleProps.fontName size:self.styleProps.fontSize.intValue];
+    }else if(self.styleProps.fontName){
+        return [UIFont fontWithName:self.styleProps.fontName size:15];
+    }else if(self.styleProps.fontSize){
+        return [UIFont systemFontOfSize:self.styleProps.fontSize.intValue];
+    }
     return [UIFont systemFontOfSize:15];
 }
 
--(UIColor *)labelColor:(NSUInteger)labelIdx{
-    return [UIColor blackColor];
+- (UIColor *)labelColor:(NSUInteger)labelIdx{
+    return  self.styleProps && self.styleProps.textColor ? self.styleProps.textColor : [UIColor blackColor];
 }
 
--(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     if(!self.expanded){
         [self toggleState];
         [self flashElement:0];
@@ -264,15 +401,16 @@ static const NSUInteger LABEL_TAG = 1111;
 
 }
 
--(void)bringElementAtIndex:(NSUInteger)srcIdx toIndex:(NSUInteger)dstIdx{
+- (void)bringElementAtIndex:(NSUInteger)srcIdx toIndex:(NSUInteger)dstIdx{
     [self.data exchangeObjectAtIndex:srcIdx withObjectAtIndex:dstIdx];
     [self buildWithElements:self.data];
 }
--(void)bringElementAtIndexToTitle:(NSUInteger)index{
+
+- (void)bringElementAtIndexToTitle:(NSUInteger)index{
     [self bringElementAtIndex:index toIndex:0];
 }
 
--(void)pickElementAtIndex:(NSUInteger)index{
+- (void)pickElementAtIndex:(NSUInteger)index{
     self.selectedIndex = index;
     
   if (!self.showCheckmark || !(self.selectedElement && [self.selectedElement isEqual:self.data[index]])) {
@@ -309,7 +447,7 @@ static const NSUInteger LABEL_TAG = 1111;
     self.delegate = del;
 }
 
--(void)pickElementAtPoint:(CGPoint)point{
+- (void)pickElementAtPoint:(CGPoint)point{
     NSUInteger idx = point.y / [self elementHeight];
     NSLog(@"Element index:%lu",(unsigned long)idx);
     if(idx < self.data.count){
@@ -317,7 +455,7 @@ static const NSUInteger LABEL_TAG = 1111;
     }
 }
 
--(void)flashElement:(NSUInteger)index{
+- (void)flashElement:(NSUInteger)index{
     UIView *v = [[UIView alloc]initWithFrame:CGRectMake(0,
                                                         index * self.initialHeight,
                                                         CGRectGetWidth(self.frame),
@@ -341,7 +479,7 @@ static const NSUInteger LABEL_TAG = 1111;
     }
 }
 
--(void)toggleState{
+- (void)toggleState{
     CGFloat maximumHeight = (self.maximumHeight > 1 ? MIN(self.maximumHeight, MAX_HEIGHT) : MAX_HEIGHT);
     CGFloat HEIGHT_DELTA_TMP = MIN(self.data.count * [self elementHeight], maximumHeight);
     CGFloat duration = 0.2;
@@ -404,16 +542,16 @@ static const NSUInteger LABEL_TAG = 1111;
     }];
 }
 
--(NSString*)getCurrentItem{
+- (NSString*)getCurrentItem{
     return self.data[0];
 }
 
--(void)dealloc{
+- (void)dealloc{
     [self.dismissGesture.view removeGestureRecognizer:self.dismissGesture];
     [self.scrollGesture.view removeGestureRecognizer:self.scrollGesture];
 }
 
--(void)setOffsetProperty:(CGPoint)offsetProperty{
+- (void)setOffsetProperty:(CGPoint)offsetProperty{
     CGRect b = self.bounds;
     b.origin = offsetProperty;
     if(b.origin.y < 0){
@@ -427,7 +565,7 @@ static const NSUInteger LABEL_TAG = 1111;
     self.bounds = b;
 }
 
--(CGPoint)offsetProperty{
+- (CGPoint)offsetProperty{
     return self.bounds.origin;
 }
 

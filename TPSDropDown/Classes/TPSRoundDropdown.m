@@ -14,32 +14,18 @@
 -(instancetype)initWithCoder:(NSCoder *)aDecoder{
     self = [super initWithCoder:aDecoder];
     if (self) {
-        self.layer.borderWidth = 1;
-        self.layer.cornerRadius = CGRectGetHeight(self.frame)/2;
-        
-        NSBundle *currentBundle = [NSBundle bundleForClass:self.class];
-        NSString *resourceBundlePath = [currentBundle pathForResource:@"TPSDropDown" ofType:@"bundle"];
-        NSBundle *resourceBundle = [NSBundle bundleWithPath:resourceBundlePath];
-        
-        UIImage *arrow = [UIImage imageNamed:@"down-arrow-white" inBundle:resourceBundle compatibleWithTraitCollection:nil];
-        [self initArrowWithImage:arrow];
+        [self applyStyleDictionary:@{@"cornerRadius":@(CGRectGetHeight(self.frame)/2),
+                                     @"backgroundColor":@"0xAAAAAA",
+                                     @"borderWidth":@(1),
+                                     @"separatorHeight":@(1),
+                                     @"fontName":@"ProximaNova-Semibold",
+                                     @"fontSize":@(14),
+                                     @"textColor":@"0xFFFFFF",
+                                     @"separatorColor":@"0xAAAAAA",
+                                     @"textAlignment":@"Left",
+                                     @"indicatorImageName":@"down-arrow-white"}];
     }
     return self;
-}
-
--(UIFont *)labelFont:(NSUInteger)labelIdx{
-    if (self.labelFont) {
-        return self.labelFont;
-    }
-    return [UIFont fontWithName:@"ProximaNova-Semibold" size:14];
-}
-
--(UIColor *)labelColor:(NSUInteger)labelIdx{
-    return [UIColor whiteColor];
-}
-
--(CGFloat)customYoffset {
-    return 1;
 }
 
 @end

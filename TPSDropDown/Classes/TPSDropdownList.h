@@ -27,4 +27,8 @@
 - (void)resetFirstElement;
 - (NSString *)getCurrentItem;
 - (NSUInteger)elementHeight;
+- (void)applyStyleJson:(NSString*)jsonStyles;
+- (void)applyStyleDictionary:(NSDictionary*)dictStyles;
++ (instancetype)dropdownWithStyle:(NSString*)jsonStyles;
+- (void)initArrowWithImage:(UIImage*)arrowImage;
 @end

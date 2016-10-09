@@ -84,6 +84,8 @@
 		53D1DB3FB97B1CC736F2B9C4D5D6F728 /* SPTExample.h in Headers */ = {isa = PBXBuildFile; fileRef = CA0824B1C7A539897404859A96721C35 /* SPTExample.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5462F4C615AB01D381D1C6D9B379239F /* SPTExampleGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 64C95D6B843C631FEFA65585C88170D1 /* SPTExampleGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5819AEC3ED2FECC2D857FBEBBDB4D86F /* POPMath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 30C6B0FCA6397528ED6CCCF859014B6E /* POPMath.mm */; };
+		5830C6541DAAB20700CBB61A /* UIColor+UIColorAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 5830C6521DAAB20700CBB61A /* UIColor+UIColorAdditions.h */; };
+		5830C6551DAAB20700CBB61A /* UIColor+UIColorAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5830C6531DAAB20700CBB61A /* UIColor+UIColorAdditions.m */; };
 		585E0FA74D1DE7DF2A410BE4F29097DF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 037FA189980C84B633739174E8E19ADE /* UIKit.framework */; };
 		590C5CD862109E84903F289679BE6621 /* TPSDropDown.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 10BE367DBB6F11D174D1D03C55C3FBA6 /* TPSDropDown.bundle */; };
 		59148151D52F07603FF77DBB94854288 /* SPTCallSite.m in Sources */ = {isa = PBXBuildFile; fileRef = 4339F190130F13B9E2D8E257A6E34F19 /* SPTCallSite.m */; };
@@ -395,6 +397,8 @@
 		54B68528AE772197C41035ED76B28272 /* EXPBlockDefinedMatcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXPBlockDefinedMatcher.h; path = Expecta/EXPBlockDefinedMatcher.h; sourceTree = "<group>"; };
 		562B56D87529B3AD85C2FA5F8B3BA820 /* POPCGUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPCGUtils.h; path = pop/POPCGUtils.h; sourceTree = "<group>"; };
 		576F2891C3653EFC3C6A9FFB7E2AF763 /* EXPMatchers+beGreaterThan.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beGreaterThan.h"; path = "Expecta/Matchers/EXPMatchers+beGreaterThan.h"; sourceTree = "<group>"; };
+		5830C6521DAAB20700CBB61A /* UIColor+UIColorAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+UIColorAdditions.h"; sourceTree = "<group>"; };
+		5830C6531DAAB20700CBB61A /* UIColor+UIColorAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+UIColorAdditions.m"; sourceTree = "<group>"; };
 		589646204E4DB0A445E5C2A28D1046DD /* EXPMatchers+beginWith.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beginWith.h"; path = "Expecta/Matchers/EXPMatchers+beginWith.h"; sourceTree = "<group>"; };
 		59582BB6197E1D5D989C374EE0E497A9 /* XCTestCase+Specta.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "XCTestCase+Specta.m"; path = "Specta/Specta/XCTestCase+Specta.m"; sourceTree = "<group>"; };
 		59B387B2915C7ADD7262CD2ACEE20190 /* NSObject+Expecta.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+Expecta.h"; path = "Expecta/NSObject+Expecta.h"; sourceTree = "<group>"; };
@@ -977,6 +981,8 @@
 		8FBB56E08CED1C71FA6EF200CC8014A2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5830C6521DAAB20700CBB61A /* UIColor+UIColorAdditions.h */,
+				5830C6531DAAB20700CBB61A /* UIColor+UIColorAdditions.m */,
 				2E40CE8CEC8ED5352315DC41CEEC7246 /* TPSDropdownList.h */,
 				A59DCFCDA977A917033469165D0DF7E5 /* TPSDropdownList.m */,
 				8B6040A4CD527273D2076AB8962BB05D /* TPSRoundDropdown.h */,
@@ -1189,6 +1195,7 @@
 				68A53DD6D1FEEE777E0EDC24A84378D6 /* TPSDropDown-umbrella.h in Headers */,
 				0DBBC8F97292007BC966D54FF2C6C061 /* TPSDropdownList.h in Headers */,
 				D6FD77B50A07042C92836CD48109397B /* TPSRoundDropdown.h in Headers */,
+				5830C6541DAAB20700CBB61A /* UIColor+UIColorAdditions.h in Headers */,
 				AD9574B23EAD87B06B4C01A41934D0AE /* TPSSquareDropdown.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1519,6 +1526,7 @@
 				2716A435DA0E598584A0818DE004159B /* TPSDropDown-dummy.m in Sources */,
 				64F64765C86350D7ED17CBD8F7C4A3F4 /* TPSDropdownList.m in Sources */,
 				2A2E70E9B6C4F506C1A92335AF3BF451 /* TPSRoundDropdown.m in Sources */,
+				5830C6551DAAB20700CBB61A /* UIColor+UIColorAdditions.m in Sources */,
 				8A3B50966D879DCE0A77162FEF14C057 /* TPSSquareDropdown.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
