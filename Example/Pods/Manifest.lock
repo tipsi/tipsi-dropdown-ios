@@ -11,7 +11,7 @@ PODS:
     - FBSnapshotTestCase/Core
   - pop (1.0.9)
   - Specta (1.0.5)
-  - TPSDropDown (0.2.0):
+  - TPSDropDown (0.4.0):
     - pop (= 1.0.9)
 
 DEPENDENCIES:
@@ -32,8 +32,8 @@ SPEC CHECKSUMS:
   FBSnapshotTestCase: 918c55861356ee83aee7843d759f55a18ff6982b
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   Specta: ac94d110b865115fe60ff2c6d7281053c6f8e8a2
-  TPSDropDown: 2425f0944339c03f17a745eb76a95ed0de8797b2
+  TPSDropDown: 5f3ca38a7460772a4209f34367cf87123409f630
 
 PODFILE CHECKSUM: 5c2cbf65620b6d8bf9c98021dc0b3110ce383fc3
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.1.0.rc.2

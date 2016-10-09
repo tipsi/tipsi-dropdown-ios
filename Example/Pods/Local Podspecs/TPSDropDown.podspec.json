@@ -1,9 +1,9 @@
 {
   "name": "TPSDropDown",
-  "version": "0.2.0",
+  "version": "0.4.0",
   "summary": "Tipsi app dropdown element",
   "description": "A set of classes defining dropdown element used in Tipsi app.",
-  "homepage": "https://github.com/tipsi/tipsi-dropdown",
+  "homepage": "https://github.com/tipsi/tipsi-dropdown-ios",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,8 +12,8 @@
     "Tipsi team": "support@gettipsi.com"
   },
   "source": {
-    "git": "https://github.com/tipsi/tipsi-dropdown.git",
-    "tag": "0.2.0"
+    "git": "https://github.com/tipsi/tipsi-dropdown-ios.git",
+    "tag": "0.4.0"
   },
   "platforms": {
     "ios": "8.0"

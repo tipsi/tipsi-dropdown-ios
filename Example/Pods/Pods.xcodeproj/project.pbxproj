@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		01692FEBF3D1679B7E817E527DC33B28 /* SPTCompiledExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A0356D5C4EE38B69E06E6AB4D43962 /* SPTCompiledExample.m */; };
 		016DD2C74697B84EC41E59BEAE79192B /* POPAnimationExtras.h in Headers */ = {isa = PBXBuildFile; fileRef = 7219867BB7DE03DCD2E669653125ABD5 /* POPAnimationExtras.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0244D954608DC5A3CF4F9BB33B33FC8D /* TPSSquareDropdown.h in Headers */ = {isa = PBXBuildFile; fileRef = BDD83C29588DEEBCCEE7B8031C4E62F9 /* TPSSquareDropdown.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03284124994EBBD44C3CDAAFCD273B82 /* Expecta+Snapshots-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 48909F5D0C90B0255F87A9D39BD2CD83 /* Expecta+Snapshots-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0410D84A63023AA4E5F3AC1C1A1F6229 /* POPAction.h in Headers */ = {isa = PBXBuildFile; fileRef = D4A7E0230A7C94EE0935D8DB72C83ACC /* POPAction.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		045AF762F6ECC84B3900F3BDE8360BEA /* TransformationMatrix.h in Headers */ = {isa = PBXBuildFile; fileRef = F4B741A5782F52E613E08B84D33DF9A9 /* TransformationMatrix.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -23,7 +24,6 @@
 		0C6FF91EB1F0391ED75DC72D31D159EF /* EXPMatchers+beTruthy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1519810D12DB64F8D5F61AF014520166 /* EXPMatchers+beTruthy.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		0C9D81EFCFB8D5D4D69BD041764EB242 /* POPCGUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 562B56D87529B3AD85C2FA5F8B3BA820 /* POPCGUtils.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		0D16B556212D317A0D4FEB71E102E207 /* EXPMatchers+beLessThan.h in Headers */ = {isa = PBXBuildFile; fileRef = AB62E87A857BB9B788A22DDB3711A3E6 /* EXPMatchers+beLessThan.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0DBBC8F97292007BC966D54FF2C6C061 /* TPSDropdownList.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E40CE8CEC8ED5352315DC41CEEC7246 /* TPSDropdownList.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0EBFA5FBE4953A83B677CE2A75746761 /* EXPMatchers+beLessThan.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EC38412B51F732492947934B8C025A /* EXPMatchers+beLessThan.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		0F94F5B0ABB3252B9275B7C129EC7A26 /* EXPMatchers+equal.h in Headers */ = {isa = PBXBuildFile; fileRef = FA19C829B12CD51260A0F42B038B30B3 /* EXPMatchers+equal.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		11C1AEB289C1EB80089349B71F09D04B /* EXPMatchers+raiseWithReason.h in Headers */ = {isa = PBXBuildFile; fileRef = 270865C2E9A62EE555025F6C099E626F /* EXPMatchers+raiseWithReason.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -36,6 +36,7 @@
 		174118A68A2AE73A0F8F528304946A0F /* POP.h in Headers */ = {isa = PBXBuildFile; fileRef = 53AE682FF057758A1E03477E788B7616 /* POP.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		17572374B2AE183C6347C41E8DF8E579 /* EXPMatchers+beFalsy.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAF574C5E11E1625EE181F4A0075DD7 /* EXPMatchers+beFalsy.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1A1AB2EC52323C5EA28DAA99F1E1A90D /* EXPMatchers+endWith.h in Headers */ = {isa = PBXBuildFile; fileRef = 728AB7942BEE92A1AFBFCD8287BE33F5 /* EXPMatchers+endWith.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A82368EE378BED974BBD01D0166FA43 /* TPSRoundDropdown.h in Headers */ = {isa = PBXBuildFile; fileRef = 065946C6B971089D28A169D980996932 /* TPSRoundDropdown.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1AB3304B6884F626BC54150AC7565E18 /* EXPMatchers+equal.m in Sources */ = {isa = PBXBuildFile; fileRef = A56C58EEEEE2378E95CE59DEF5CDA33B /* EXPMatchers+equal.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1B0389CD88AA949B34DC7269030FEC6F /* EXPMatchers+beGreaterThanOrEqualTo.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B47E5979C377C241E582A17BA07F42 /* EXPMatchers+beGreaterThanOrEqualTo.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1C27058FA13307FF64C07FC241033BD1 /* POPAnimationExtras.mm in Sources */ = {isa = PBXBuildFile; fileRef = DEFA5414C43EE6BD19452D1597DDCE2D /* POPAnimationExtras.mm */; };
@@ -44,10 +45,8 @@
 		204D694B03BFF3B244A6AB73FACFFC43 /* Expecta-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 747042A0129C5E369433B7F24CA84456 /* Expecta-dummy.m */; };
 		20B82A050CD62F330C4A27A08F614892 /* pop-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B53C05975E51EC97E11AFED8D459DB2 /* pop-dummy.m */; };
 		260BC7EED9289AF321A6F791964CE472 /* EXPMatchers+respondTo.h in Headers */ = {isa = PBXBuildFile; fileRef = F206DFCA7A298AA2BB146CDD50034E2D /* EXPMatchers+respondTo.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2716A435DA0E598584A0818DE004159B /* TPSDropDown-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB72153A3CF7AF2790E272E1BEB8671 /* TPSDropDown-dummy.m */; };
 		285A7737509FDE37F1A135BBD378D26F /* SpectaUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CC878FBA0879B16FF844EF28C6DB514 /* SpectaUtility.m */; };
 		2916A0606136A9DC67F2463AB230868B /* EXPMatchers+match.h in Headers */ = {isa = PBXBuildFile; fileRef = 24E1B702BA2EE2E612A263C27794194A /* EXPMatchers+match.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2A2E70E9B6C4F506C1A92335AF3BF451 /* TPSRoundDropdown.m in Sources */ = {isa = PBXBuildFile; fileRef = 628CC66B530C3E62751F13A68B0A6354 /* TPSRoundDropdown.m */; };
 		2C0A8737FDB9B9C6A6BDF437FD11334C /* EXPMatchers+beNil.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4935FBEEF9A78C7D43ECFF2B07CBA /* EXPMatchers+beNil.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		2CFE2898496C1C7096DB8DA43AF19103 /* EXPMatchers+raise.m in Sources */ = {isa = PBXBuildFile; fileRef = AC309F45C1D74650E4E08CA53A68B25C /* EXPMatchers+raise.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		2D0294A1F074AD370FDFE53FF14199AC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCF7419CF857324B50F142CC692CFD00 /* XCTest.framework */; };
@@ -83,9 +82,8 @@
 		528A0A47EAF1796C232B5B64B3039896 /* FBSnapshotTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F050AC9A4132585B92DEF8FF7FFB8B25 /* FBSnapshotTestCase.m */; };
 		53D1DB3FB97B1CC736F2B9C4D5D6F728 /* SPTExample.h in Headers */ = {isa = PBXBuildFile; fileRef = CA0824B1C7A539897404859A96721C35 /* SPTExample.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5462F4C615AB01D381D1C6D9B379239F /* SPTExampleGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 64C95D6B843C631FEFA65585C88170D1 /* SPTExampleGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		57FEAF74B70F89E738F2B6C10D78BCF6 /* UIColor+UIColorAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = DAFF37E68C1BEA3B09345066E1B7D25B /* UIColor+UIColorAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5819AEC3ED2FECC2D857FBEBBDB4D86F /* POPMath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 30C6B0FCA6397528ED6CCCF859014B6E /* POPMath.mm */; };
-		5830C6541DAAB20700CBB61A /* UIColor+UIColorAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 5830C6521DAAB20700CBB61A /* UIColor+UIColorAdditions.h */; };
-		5830C6551DAAB20700CBB61A /* UIColor+UIColorAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5830C6531DAAB20700CBB61A /* UIColor+UIColorAdditions.m */; };
 		585E0FA74D1DE7DF2A410BE4F29097DF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 037FA189980C84B633739174E8E19ADE /* UIKit.framework */; };
 		590C5CD862109E84903F289679BE6621 /* TPSDropDown.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 10BE367DBB6F11D174D1D03C55C3FBA6 /* TPSDropDown.bundle */; };
 		59148151D52F07603FF77DBB94854288 /* SPTCallSite.m in Sources */ = {isa = PBXBuildFile; fileRef = 4339F190130F13B9E2D8E257A6E34F19 /* SPTCallSite.m */; };
@@ -95,13 +93,11 @@
 		5EA7043FE10E75D02F3C3052AF8B8318 /* EXPDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AA625079EFCA17D24849C584B001C2A /* EXPDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5ECA41C3A0EC7BB8C07B887EA8F8DB46 /* UnitBezier.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D18FCDFD22DCBF309036118324EED28 /* UnitBezier.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		61F3A55E5A1FE393CB05F55030883C3F /* UIApplication+StrictKeyWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E28DA3EF6924616039843460AF52F7 /* UIApplication+StrictKeyWindow.m */; };
-		64F64765C86350D7ED17CBD8F7C4A3F4 /* TPSDropdownList.m in Sources */ = {isa = PBXBuildFile; fileRef = A59DCFCDA977A917033469165D0DF7E5 /* TPSDropdownList.m */; };
 		655991FD87300BACE0E5022E42B8B57E /* UIImage+Compare.m in Sources */ = {isa = PBXBuildFile; fileRef = E598DB6C96A6F1C17B118C0A74D9A51D /* UIImage+Compare.m */; };
 		65ADB9D1DCF8BEEC34AA17B4AB1404CE /* SpectaUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = E1C211A0C8244AE92A98FBBEDB3977FB /* SpectaUtility.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		65BC31095CCDFC80CBF6BBA843751F23 /* EXPMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 38728ADD34F480CAA5D018A3B58FF660 /* EXPMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		66A27898E989A3FA5C15AA671C4536F0 /* EXPMatchers+beIdenticalTo.m in Sources */ = {isa = PBXBuildFile; fileRef = 203144FF4E179E1074035ADF8DB531C1 /* EXPMatchers+beIdenticalTo.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		67459AD239EF669A365519E06B45DCFE /* EXPExpect.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D5730C8BB00325B69FD4B6640442C76 /* EXPExpect.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		68A53DD6D1FEEE777E0EDC24A84378D6 /* TPSDropDown-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 68178982291192C669777121B6147A36 /* TPSDropDown-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		68F41E9C352268CCD35068CBDA99BF8A /* UIImage+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 371FE88D23399BFB5C33B25EE966CD3A /* UIImage+Snapshot.m */; };
 		6B5640DE87704FF71F4DEC3C898D3C33 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B3651254EE415EAA129F9F52E7AEBFC /* Foundation.framework */; };
 		6C039C3599C3F8AAE5971260E90FA97A /* POPBasicAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C09662A1BEB7BAF440178F419D69688 /* POPBasicAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -113,6 +109,8 @@
 		7083E65ADFF01185E718682E8ECB40BD /* POPDecayAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = B572E5A4FC00A7D0B557862A919DCE33 /* POPDecayAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		72464CC06F0605E1B7FADF3CFA730F73 /* POPAnimationTracerInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 46F69801D8B7215F87D311CC57C2054A /* POPAnimationTracerInternal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		7276987C64D746F984898BD3D0BFECAB /* POPSpringAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = C383269C54B22D58EE41109BDB935AC0 /* POPSpringAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		733F91872F95CBBAD6D13E067DF94A03 /* TPSDropdownList.m in Sources */ = {isa = PBXBuildFile; fileRef = A711B50F7AFE69867677E3DB8B20A25D /* TPSDropdownList.m */; };
+		7573405A9A9BDE531468CBED726B864F /* TPSDropDown-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 68178982291192C669777121B6147A36 /* TPSDropDown-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		76CCABE79C04444450153424D7CE1DC1 /* EXPMatchers+beSupersetOf.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E893B407696E99D3B11EF9E49A0E9EF /* EXPMatchers+beSupersetOf.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		76D337327C10A7555447B69AA1562647 /* EXPMatchers+beInstanceOf.m in Sources */ = {isa = PBXBuildFile; fileRef = 4415B4C32AD2A3E1D5FE0C5B521CAEC0 /* EXPMatchers+beInstanceOf.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		784969BB565AD080C91EE733FD50CDA7 /* FBSnapshotTestCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 352AC34EDE27EE7431910018B4B72B56 /* FBSnapshotTestCase.framework */; };
@@ -132,7 +130,6 @@
 		85EB2F216487CB2E8F3FCCFBC4D69912 /* EXPMatchers+beTruthy.h in Headers */ = {isa = PBXBuildFile; fileRef = BE587456E811628B1B0FDEF8DA623ABB /* EXPMatchers+beTruthy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		87FD5F0F682CDEB6A348CA448889E3EA /* EXPMatchers+beKindOf.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E1A804418686509C5152C0CE862AE8 /* EXPMatchers+beKindOf.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		89F936CCD20573059DBBAF5759D4D7F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B3651254EE415EAA129F9F52E7AEBFC /* Foundation.framework */; };
-		8A3B50966D879DCE0A77162FEF14C057 /* TPSSquareDropdown.m in Sources */ = {isa = PBXBuildFile; fileRef = 1422DDB714FD89DAE06688F1BC537580 /* TPSSquareDropdown.m */; };
 		8BAF175C6F35AB44B5D8139CE70A376B /* Specta-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DEBF9779B15368034DC95124573B515 /* Specta-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8C8C1B0D83FE6A4352F15154DB16372C /* EXPMatcherHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = B79F1BB43883DCD7406D91CA3E004E47 /* EXPMatcherHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8EFC49D4014BD3BDCDBFC3713F6155D9 /* POPAnimationEventInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = F4B36C518BA36F52F4D4829BD905D0E7 /* POPAnimationEventInternal.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -148,13 +145,15 @@
 		9BB9159FBA757600D3D4C0FF645F3911 /* EXPMatchers+beInTheRangeOf.m in Sources */ = {isa = PBXBuildFile; fileRef = D4441C80E311664F7FE8A65F120BAC26 /* EXPMatchers+beInTheRangeOf.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9BBC4D6619D17535AF974C22A782E367 /* POPVector.h in Headers */ = {isa = PBXBuildFile; fileRef = EE36341AB91A619719F96D8E5EA4B683 /* POPVector.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		9E0339311A6FFD778639E434E5683F96 /* XCTestCase+Specta.h in Headers */ = {isa = PBXBuildFile; fileRef = 28610F7B1EE6EA3F4BB625503B2C9942 /* XCTestCase+Specta.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9EDCD3F78B8BFC7CA5EEFFEEA19D254A /* TPSRoundDropdown.m in Sources */ = {isa = PBXBuildFile; fileRef = DB15435964AC4486251DF2F42C33E664 /* TPSRoundDropdown.m */; };
+		A03FF2680F9BAB4FB177367B9CC9A3B5 /* TPSDropDown-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB72153A3CF7AF2790E272E1BEB8671 /* TPSDropDown-dummy.m */; };
 		A2D70E06D8781FC2D2F91A138CB55766 /* POPAnimationRuntime.h in Headers */ = {isa = PBXBuildFile; fileRef = F8AA5EBA50CDB5AEAC88FC28328850C9 /* POPAnimationRuntime.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		A48DD4E07B4DDD34C337A94ABE919136 /* SPTCompiledExample.h in Headers */ = {isa = PBXBuildFile; fileRef = 91DA7A854DA6B0B3041E07544870AFF3 /* SPTCompiledExample.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6019967D823A52759254DE50B3C639E /* EXPMatchers+FBSnapshotTest.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA764C2D93C174464D9D87B5EFE2EC1 /* EXPMatchers+FBSnapshotTest.m */; };
 		A67036F5899F6AECF3E9A57B57B08459 /* SpectaDSL.m in Sources */ = {isa = PBXBuildFile; fileRef = EA429CD19C3C38ADD3EB70B3EB46D610 /* SpectaDSL.m */; };
 		A682DD99D8AFA53A2233B6156845657A /* POPLayerExtras.h in Headers */ = {isa = PBXBuildFile; fileRef = E1ED4696708FDEF49B253959F4D02AC1 /* POPLayerExtras.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AC9CE0ECC78F93770B8007D360389BAB /* XCTestCase+Specta.m in Sources */ = {isa = PBXBuildFile; fileRef = 59582BB6197E1D5D989C374EE0E497A9 /* XCTestCase+Specta.m */; };
-		AD9574B23EAD87B06B4C01A41934D0AE /* TPSSquareDropdown.h in Headers */ = {isa = PBXBuildFile; fileRef = D830528E96E198522B8CDE7187172175 /* TPSSquareDropdown.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE9B0FF02D6DCA4DA1C536EBC9AC0276 /* TPSDropdownList.h in Headers */ = {isa = PBXBuildFile; fileRef = 9186E369C27F8CD8DA784CEA371FCB06 /* TPSDropdownList.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF1F46668D4591602887998C6E9C10AD /* EXPMatchers+beCloseTo.h in Headers */ = {isa = PBXBuildFile; fileRef = 2354E0376B09F71681AE18A49F162883 /* EXPMatchers+beCloseTo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AFFC8900E52BBEC72059334132F3A8F3 /* ExpectaSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = A59737D6432D44BCA713C153ED41C4BD /* ExpectaSupport.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B0E8BFD99437BE55E678961D97BDD2EA /* POPPropertyAnimationInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = FF3B58A85980D8C1183ED506A2D06C6B /* POPPropertyAnimationInternal.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -172,17 +171,18 @@
 		BC55C8365AEFF8217F6A567607754854 /* EXPDoubleTuple.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F4404FD631ABA7118A70EECEC217AC /* EXPDoubleTuple.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		BEFFE9FFE52E9A0833A7D2D8FB67EB4D /* EXPMatchers+beSubclassOf.m in Sources */ = {isa = PBXBuildFile; fileRef = 71539DEDEE80C3A90A9A9197091F1180 /* EXPMatchers+beSubclassOf.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		BF5CBA35330C8DD24489E35F1EDC0840 /* UIApplication+StrictKeyWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 86D4FE7B5A02668179729714EE58599F /* UIApplication+StrictKeyWindow.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C28B08CE0D9172E90646F5B9FA80344D /* UIColor+UIColorAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BF22687E342BCC97B1E838108256BFF2 /* UIColor+UIColorAdditions.m */; };
 		C3AF6DF6B9CA3796BFE9FC2E312CF59D /* POPGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 727C352CD53794731836DEC8BE712770 /* POPGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C4023C1FB9DB90CB55F6A8803D8F9D96 /* POPAnimationPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 97D5D796D45C4905222261F3C0FF08A0 /* POPAnimationPrivate.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C544C82F16F636B837C2FB2ED106F6D2 /* POPDecayAnimation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 110FF1DAFC49CBF22C58C537C5381BA5 /* POPDecayAnimation.mm */; };
 		C5B7C6732A0470E64C5ED294675EE5C0 /* Pods-TPSDropDown_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C07D77E06F3523C4BB6F1A2373213653 /* Pods-TPSDropDown_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C608154760BF6085D2ECA64B22A89D8B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCF7419CF857324B50F142CC692CFD00 /* XCTest.framework */; };
+		CCA7796C855BA5D72DF62BF2A02FB2DF /* TPSSquareDropdown.m in Sources */ = {isa = PBXBuildFile; fileRef = B416D3EFC2AF3BC1C67335BE277221E4 /* TPSSquareDropdown.m */; };
 		CD445FF2FDF3698A06F1FD16F917EFB9 /* UIImage+Diff.h in Headers */ = {isa = PBXBuildFile; fileRef = ABA11EF8C96D2FDD3AC498BDC3876B63 /* UIImage+Diff.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		CE3F4ECBB0BC095577D66AE50C8E604C /* EXPFloatTuple.m in Sources */ = {isa = PBXBuildFile; fileRef = E29943AFA614B9A7D42E5DF558231607 /* EXPFloatTuple.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CEC33D8DBF52DC19EFF7C564F9FB6C1C /* SpectaDSL.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E81FCCAA72838D9D34721F3CD2AC34 /* SpectaDSL.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D1AE78CA41815F420BA3A131E23153C7 /* ExpectaObject+FBSnapshotTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 764049584BAA7CD513FE90BBD294D9FC /* ExpectaObject+FBSnapshotTest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D60DC442AE95E9EDFD7D3430D1765FFB /* POPAnimationTracer.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B66D6C5AB8435BDB26490A783ACCA71 /* POPAnimationTracer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D6FD77B50A07042C92836CD48109397B /* TPSRoundDropdown.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B6040A4CD527273D2076AB8962BB05D /* TPSRoundDropdown.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D83677C54D2226C67886A525B0B46FBE /* EXPMatchers+beLessThanOrEqualTo.m in Sources */ = {isa = PBXBuildFile; fileRef = FFF7C81F4C4142E7432730EB0955B347 /* EXPMatchers+beLessThanOrEqualTo.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		DB30F82FB1BE083D9471B965FB500CA2 /* EXPMatchers+conformTo.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F53748940F74EC19BCF70079A7FF0B /* EXPMatchers+conformTo.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		DBE2FB4A80AF9C3659D0EEBAE34C8539 /* POPAnimation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 43BFE4910AC69460DED3A9711AE9497B /* POPAnimation.mm */; };
@@ -316,6 +316,7 @@
 		04E81FCCAA72838D9D34721F3CD2AC34 /* SpectaDSL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SpectaDSL.h; path = Specta/Specta/SpectaDSL.h; sourceTree = "<group>"; };
 		0595ECB62D66CF9222C89149F441098C /* SPTTestSuite.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPTTestSuite.m; path = Specta/Specta/SPTTestSuite.m; sourceTree = "<group>"; };
 		05F01F888C473106ADE0C55254F86CE7 /* SPTSharedExampleGroups.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTSharedExampleGroups.h; path = Specta/Specta/SPTSharedExampleGroups.h; sourceTree = "<group>"; };
+		065946C6B971089D28A169D980996932 /* TPSRoundDropdown.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPSRoundDropdown.h; sourceTree = "<group>"; };
 		06D12A9C3DDC6A95ACDBCCF4D18EA1FC /* UIImage+Snapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Snapshot.h"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.h"; sourceTree = "<group>"; };
 		07E3034902DE6C6537698E7B9BBFD3A1 /* Pods-TPSDropDown_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TPSDropDown_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		08C01621DB924190AA6F50BEA1AF601A /* NSValue+Expecta.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSValue+Expecta.m"; path = "Expecta/NSValue+Expecta.m"; sourceTree = "<group>"; };
@@ -327,7 +328,6 @@
 		110FF1DAFC49CBF22C58C537C5381BA5 /* POPDecayAnimation.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPDecayAnimation.mm; path = pop/POPDecayAnimation.mm; sourceTree = "<group>"; };
 		116DEC05B4DC9956ACAB4B8179DCD72A /* Pods-TPSDropDown_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-TPSDropDown_Tests.modulemap"; sourceTree = "<group>"; };
 		130F2F95CABD015CF61BB73986026D94 /* FBSnapshotTestCase.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSnapshotTestCase.xcconfig; sourceTree = "<group>"; };
-		1422DDB714FD89DAE06688F1BC537580 /* TPSSquareDropdown.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TPSSquareDropdown.m; sourceTree = "<group>"; };
 		148BFE51E56C496D9097CF7A537CE5FD /* FBSnapshotTestController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestController.h; path = FBSnapshotTestCase/FBSnapshotTestController.h; sourceTree = "<group>"; };
 		1519810D12DB64F8D5F61AF014520166 /* EXPMatchers+beTruthy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beTruthy.m"; path = "Expecta/Matchers/EXPMatchers+beTruthy.m"; sourceTree = "<group>"; };
 		15F115DC18D6478469BF3E025408E848 /* Expecta_Snapshots.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Expecta_Snapshots.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -354,7 +354,6 @@
 		2D256E58917260E4CD84B025C6E43E94 /* EXPMatchers+raiseWithReason.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+raiseWithReason.m"; path = "Expecta/Matchers/EXPMatchers+raiseWithReason.m"; sourceTree = "<group>"; };
 		2D5730C8BB00325B69FD4B6640442C76 /* EXPExpect.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXPExpect.h; path = Expecta/EXPExpect.h; sourceTree = "<group>"; };
 		2D89434622F89396AFE484E50FDC064C /* FBSnapshotTestController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestController.m; path = FBSnapshotTestCase/FBSnapshotTestController.m; sourceTree = "<group>"; };
-		2E40CE8CEC8ED5352315DC41CEEC7246 /* TPSDropdownList.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPSDropdownList.h; sourceTree = "<group>"; };
 		30C6B0FCA6397528ED6CCCF859014B6E /* POPMath.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPMath.mm; path = pop/POPMath.mm; sourceTree = "<group>"; };
 		352AC34EDE27EE7431910018B4B72B56 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		360CD8AB58FFA52939D98B8C32577839 /* EXPMatchers+FBSnapshotTest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+FBSnapshotTest.h"; sourceTree = "<group>"; };
@@ -397,8 +396,6 @@
 		54B68528AE772197C41035ED76B28272 /* EXPBlockDefinedMatcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXPBlockDefinedMatcher.h; path = Expecta/EXPBlockDefinedMatcher.h; sourceTree = "<group>"; };
 		562B56D87529B3AD85C2FA5F8B3BA820 /* POPCGUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPCGUtils.h; path = pop/POPCGUtils.h; sourceTree = "<group>"; };
 		576F2891C3653EFC3C6A9FFB7E2AF763 /* EXPMatchers+beGreaterThan.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beGreaterThan.h"; path = "Expecta/Matchers/EXPMatchers+beGreaterThan.h"; sourceTree = "<group>"; };
-		5830C6521DAAB20700CBB61A /* UIColor+UIColorAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+UIColorAdditions.h"; sourceTree = "<group>"; };
-		5830C6531DAAB20700CBB61A /* UIColor+UIColorAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+UIColorAdditions.m"; sourceTree = "<group>"; };
 		589646204E4DB0A445E5C2A28D1046DD /* EXPMatchers+beginWith.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beginWith.h"; path = "Expecta/Matchers/EXPMatchers+beginWith.h"; sourceTree = "<group>"; };
 		59582BB6197E1D5D989C374EE0E497A9 /* XCTestCase+Specta.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "XCTestCase+Specta.m"; path = "Specta/Specta/XCTestCase+Specta.m"; sourceTree = "<group>"; };
 		59B387B2915C7ADD7262CD2ACEE20190 /* NSObject+Expecta.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+Expecta.h"; path = "Expecta/NSObject+Expecta.h"; sourceTree = "<group>"; };
@@ -408,7 +405,6 @@
 		5B7789908A361800458FAE944139D518 /* Pods-TPSDropDown_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TPSDropDown_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		5C0883090EE58454BBC10A7079F5C430 /* Pods-TPSDropDown_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TPSDropDown_Example.release.xcconfig"; sourceTree = "<group>"; };
 		5EB72153A3CF7AF2790E272E1BEB8671 /* TPSDropDown-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TPSDropDown-dummy.m"; sourceTree = "<group>"; };
-		628CC66B530C3E62751F13A68B0A6354 /* TPSRoundDropdown.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TPSRoundDropdown.m; sourceTree = "<group>"; };
 		638AE783A24E50A195F5556C3E10C99F /* Specta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Specta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		642A92DC8D21BB504B409F6B731E9DC5 /* Pods-TPSDropDown_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TPSDropDown_Tests-dummy.m"; sourceTree = "<group>"; };
 		64C95D6B843C631FEFA65585C88170D1 /* SPTExampleGroup.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTExampleGroup.h; path = Specta/Specta/SPTExampleGroup.h; sourceTree = "<group>"; };
@@ -444,7 +440,6 @@
 		80BC9D2C4B1C7BBAAE29CC330CE8404D /* TransformationMatrix.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = TransformationMatrix.cpp; path = pop/WebCore/TransformationMatrix.cpp; sourceTree = "<group>"; };
 		86D4FE7B5A02668179729714EE58599F /* UIApplication+StrictKeyWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication+StrictKeyWindow.h"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.h"; sourceTree = "<group>"; };
 		88D5F2C6EDD5600819A6478CCD0ABDBD /* UIImage+Compare.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Compare.h"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.h"; sourceTree = "<group>"; };
-		8B6040A4CD527273D2076AB8962BB05D /* TPSRoundDropdown.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPSRoundDropdown.h; sourceTree = "<group>"; };
 		8C760AA8B9910ABC8D06869FF7274105 /* EXPMatchers+respondTo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+respondTo.m"; path = "Expecta/Matchers/EXPMatchers+respondTo.m"; sourceTree = "<group>"; };
 		8D56E60130BA24947624F9099A363839 /* SPTExampleGroup.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPTExampleGroup.m; path = Specta/Specta/SPTExampleGroup.m; sourceTree = "<group>"; };
 		8E560D24008FF407C20A69BC08A62A8B /* POPAnimationEvent.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPAnimationEvent.mm; path = pop/POPAnimationEvent.mm; sourceTree = "<group>"; };
@@ -455,6 +450,7 @@
 		9082E4937378D89104C7C06067CDE9B9 /* POPAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAnimation.h; path = pop/POPAnimation.h; sourceTree = "<group>"; };
 		90F53748940F74EC19BCF70079A7FF0B /* EXPMatchers+conformTo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+conformTo.m"; path = "Expecta/Matchers/EXPMatchers+conformTo.m"; sourceTree = "<group>"; };
 		917B6FB5109BFA37B56ACAAC7710F394 /* EXPMatchers+beGreaterThan.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beGreaterThan.m"; path = "Expecta/Matchers/EXPMatchers+beGreaterThan.m"; sourceTree = "<group>"; };
+		9186E369C27F8CD8DA784CEA371FCB06 /* TPSDropdownList.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPSDropdownList.h; sourceTree = "<group>"; };
 		91DA7A854DA6B0B3041E07544870AFF3 /* SPTCompiledExample.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTCompiledExample.h; path = Specta/Specta/SPTCompiledExample.h; sourceTree = "<group>"; };
 		92C4026AC57361C47108EF24FC7769C5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		938AED2BD3E07C19AF152E4F02EBCA42 /* Expecta+Snapshots.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Expecta+Snapshots.xcconfig"; sourceTree = "<group>"; };
@@ -473,8 +469,8 @@
 		A55B632AE837E06C5DD4ECAD2F29F6BC /* FBSnapshotTestCase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = FBSnapshotTestCase.modulemap; sourceTree = "<group>"; };
 		A56C58EEEEE2378E95CE59DEF5CDA33B /* EXPMatchers+equal.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+equal.m"; path = "Expecta/Matchers/EXPMatchers+equal.m"; sourceTree = "<group>"; };
 		A59737D6432D44BCA713C153ED41C4BD /* ExpectaSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ExpectaSupport.h; path = Expecta/ExpectaSupport.h; sourceTree = "<group>"; };
-		A59DCFCDA977A917033469165D0DF7E5 /* TPSDropdownList.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TPSDropdownList.m; sourceTree = "<group>"; };
 		A6223D777BC8C429DD26981EF7F59659 /* EXPMatchers+beInTheRangeOf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beInTheRangeOf.h"; path = "Expecta/Matchers/EXPMatchers+beInTheRangeOf.h"; sourceTree = "<group>"; };
+		A711B50F7AFE69867677E3DB8B20A25D /* TPSDropdownList.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TPSDropdownList.m; sourceTree = "<group>"; };
 		A77690F5248EA4F58EF9F7FBF63E4095 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB62E87A857BB9B788A22DDB3711A3E6 /* EXPMatchers+beLessThan.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beLessThan.h"; path = "Expecta/Matchers/EXPMatchers+beLessThan.h"; sourceTree = "<group>"; };
 		ABA11EF8C96D2FDD3AC498BDC3876B63 /* UIImage+Diff.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Diff.h"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.h"; sourceTree = "<group>"; };
@@ -486,6 +482,7 @@
 		B1E1A804418686509C5152C0CE862AE8 /* EXPMatchers+beKindOf.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beKindOf.m"; path = "Expecta/Matchers/EXPMatchers+beKindOf.m"; sourceTree = "<group>"; };
 		B2F5CACBEAEE64232B916E28BC256E7C /* EXPMatchers+conformTo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+conformTo.h"; path = "Expecta/Matchers/EXPMatchers+conformTo.h"; sourceTree = "<group>"; };
 		B411C9AF14D0BDBEAD5467D8CEE10CB5 /* POPLayerExtras.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPLayerExtras.mm; path = pop/POPLayerExtras.mm; sourceTree = "<group>"; };
+		B416D3EFC2AF3BC1C67335BE277221E4 /* TPSSquareDropdown.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TPSSquareDropdown.m; sourceTree = "<group>"; };
 		B4744D7E69F065BC4E82C0FBC45DF0E9 /* EXPMatchers+beInstanceOf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beInstanceOf.h"; path = "Expecta/Matchers/EXPMatchers+beInstanceOf.h"; sourceTree = "<group>"; };
 		B572E5A4FC00A7D0B557862A919DCE33 /* POPDecayAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPDecayAnimation.h; path = pop/POPDecayAnimation.h; sourceTree = "<group>"; };
 		B79F1BB43883DCD7406D91CA3E004E47 /* EXPMatcherHelpers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXPMatcherHelpers.h; path = Expecta/Matchers/EXPMatcherHelpers.h; sourceTree = "<group>"; };
@@ -496,8 +493,10 @@
 		BBE39DA639748983D5AFCA7B7492B288 /* Pods-TPSDropDown_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TPSDropDown_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		BD0D2A13957032AC8CB3FF8B4D2D113E /* Expecta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Expecta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDA3784A1B461DA7B3B5DF417CB0CBF2 /* SPTGlobalBeforeAfterEach.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTGlobalBeforeAfterEach.h; path = Specta/Specta/SPTGlobalBeforeAfterEach.h; sourceTree = "<group>"; };
+		BDD83C29588DEEBCCEE7B8031C4E62F9 /* TPSSquareDropdown.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPSSquareDropdown.h; sourceTree = "<group>"; };
 		BE587456E811628B1B0FDEF8DA623ABB /* EXPMatchers+beTruthy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beTruthy.h"; path = "Expecta/Matchers/EXPMatchers+beTruthy.h"; sourceTree = "<group>"; };
 		BF17D9DC6854A2FE6BCE98C40972977D /* EXPMatchers+haveCountOf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+haveCountOf.h"; path = "Expecta/Matchers/EXPMatchers+haveCountOf.h"; sourceTree = "<group>"; };
+		BF22687E342BCC97B1E838108256BFF2 /* UIColor+UIColorAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIColor+UIColorAdditions.m"; sourceTree = "<group>"; };
 		BFA764C2D93C174464D9D87B5EFE2EC1 /* EXPMatchers+FBSnapshotTest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EXPMatchers+FBSnapshotTest.m"; sourceTree = "<group>"; };
 		BFE8F9940C0A3898127A0B9C329CF609 /* Pods-TPSDropDown_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TPSDropDown_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C07D77E06F3523C4BB6F1A2373213653 /* Pods-TPSDropDown_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TPSDropDown_Example-umbrella.h"; sourceTree = "<group>"; };
@@ -521,9 +520,10 @@
 		D4A7E0230A7C94EE0935D8DB72C83ACC /* POPAction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAction.h; path = pop/POPAction.h; sourceTree = "<group>"; };
 		D5F56E946765BC8665DF91BA573C6853 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		D71FE89EE409D1606BB9548E775F1449 /* pop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = pop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D830528E96E198522B8CDE7187172175 /* TPSSquareDropdown.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPSSquareDropdown.h; sourceTree = "<group>"; };
 		DA8C536C0370E1EF618658AF6AF160EB /* POPCGUtils.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPCGUtils.mm; path = pop/POPCGUtils.mm; sourceTree = "<group>"; };
 		DAB7759AE6FDFA7230CAC49218146A4B /* EXPMatchers+haveCountOf.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+haveCountOf.m"; path = "Expecta/Matchers/EXPMatchers+haveCountOf.m"; sourceTree = "<group>"; };
+		DAFF37E68C1BEA3B09345066E1B7D25B /* UIColor+UIColorAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIColor+UIColorAdditions.h"; sourceTree = "<group>"; };
+		DB15435964AC4486251DF2F42C33E664 /* TPSRoundDropdown.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TPSRoundDropdown.m; sourceTree = "<group>"; };
 		DEFA5414C43EE6BD19452D1597DDCE2D /* POPAnimationExtras.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPAnimationExtras.mm; path = pop/POPAnimationExtras.mm; sourceTree = "<group>"; };
 		E0E28DA3EF6924616039843460AF52F7 /* UIApplication+StrictKeyWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+StrictKeyWindow.m"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.m"; sourceTree = "<group>"; };
 		E168F7F37341966124CEEB5620A0068C /* POPMath.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPMath.h; path = pop/POPMath.h; sourceTree = "<group>"; };
@@ -768,6 +768,21 @@
 			name = SwiftSupport;
 			sourceTree = "<group>";
 		};
+		539D794C550714A0E0519E96749F29A1 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				9186E369C27F8CD8DA784CEA371FCB06 /* TPSDropdownList.h */,
+				A711B50F7AFE69867677E3DB8B20A25D /* TPSDropdownList.m */,
+				065946C6B971089D28A169D980996932 /* TPSRoundDropdown.h */,
+				DB15435964AC4486251DF2F42C33E664 /* TPSRoundDropdown.m */,
+				BDD83C29588DEEBCCEE7B8031C4E62F9 /* TPSSquareDropdown.h */,
+				B416D3EFC2AF3BC1C67335BE277221E4 /* TPSSquareDropdown.m */,
+				DAFF37E68C1BEA3B09345066E1B7D25B /* UIColor+UIColorAdditions.h */,
+				BF22687E342BCC97B1E838108256BFF2 /* UIColor+UIColorAdditions.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		54D8CBCD75C186051A1A1F7C59DA49B0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -978,21 +993,6 @@
 			path = Expecta;
 			sourceTree = "<group>";
 		};
-		8FBB56E08CED1C71FA6EF200CC8014A2 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				5830C6521DAAB20700CBB61A /* UIColor+UIColorAdditions.h */,
-				5830C6531DAAB20700CBB61A /* UIColor+UIColorAdditions.m */,
-				2E40CE8CEC8ED5352315DC41CEEC7246 /* TPSDropdownList.h */,
-				A59DCFCDA977A917033469165D0DF7E5 /* TPSDropdownList.m */,
-				8B6040A4CD527273D2076AB8962BB05D /* TPSRoundDropdown.h */,
-				628CC66B530C3E62751F13A68B0A6354 /* TPSRoundDropdown.m */,
-				D830528E96E198522B8CDE7187172175 /* TPSSquareDropdown.h */,
-				1422DDB714FD89DAE06688F1BC537580 /* TPSSquareDropdown.m */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
 		B0A38C46E747EE7186A73B4AE80E1BE8 /* Expecta+Snapshots */ = {
 			isa = PBXGroup;
 			children = (
@@ -1024,10 +1024,18 @@
 			children = (
 				F84376C946E1F5486C8E7D6DF78ED878 /* Resources */,
 				E35777E32237E322E6AA2073734BA98E /* Support Files */,
-				FCA96499B32DE4CEDD6BEC0CE870C4E1 /* TPSDropDown */,
+				CBCFD90E5F3254C49925F98002AD72E0 /* TPSDropDown */,
 			);
 			name = TPSDropDown;
 			path = ../..;
+			sourceTree = "<group>";
+		};
+		CBCFD90E5F3254C49925F98002AD72E0 /* TPSDropDown */ = {
+			isa = PBXGroup;
+			children = (
+				539D794C550714A0E0519E96749F29A1 /* Classes */,
+			);
+			path = TPSDropDown;
 			sourceTree = "<group>";
 		};
 		CF8BC1D54C7FB0E9A5C7E58F90091C82 /* FBSnapshotTestCase */ = {
@@ -1105,14 +1113,6 @@
 			path = TPSDropDown;
 			sourceTree = "<group>";
 		};
-		FCA96499B32DE4CEDD6BEC0CE870C4E1 /* TPSDropDown */ = {
-			isa = PBXGroup;
-			children = (
-				8FBB56E08CED1C71FA6EF200CC8014A2 /* Classes */,
-			);
-			path = TPSDropDown;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1185,18 +1185,6 @@
 				9BBC4D6619D17535AF974C22A782E367 /* POPVector.h in Headers */,
 				045AF762F6ECC84B3900F3BDE8360BEA /* TransformationMatrix.h in Headers */,
 				5ECA41C3A0EC7BB8C07B887EA8F8DB46 /* UnitBezier.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7ADB0AC4906E1A985235A6FBA09B5B53 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				68A53DD6D1FEEE777E0EDC24A84378D6 /* TPSDropDown-umbrella.h in Headers */,
-				0DBBC8F97292007BC966D54FF2C6C061 /* TPSDropdownList.h in Headers */,
-				D6FD77B50A07042C92836CD48109397B /* TPSRoundDropdown.h in Headers */,
-				5830C6541DAAB20700CBB61A /* UIColor+UIColorAdditions.h in Headers */,
-				AD9574B23EAD87B06B4C01A41934D0AE /* TPSSquareDropdown.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1280,6 +1268,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F37A850FC7A806430B7090E570C63641 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7573405A9A9BDE531468CBED726B864F /* TPSDropDown-umbrella.h in Headers */,
+				AE9B0FF02D6DCA4DA1C536EBC9AC0276 /* TPSDropdownList.h in Headers */,
+				1A82368EE378BED974BBD01D0166FA43 /* TPSRoundDropdown.h in Headers */,
+				0244D954608DC5A3CF4F9BB33B33FC8D /* TPSSquareDropdown.h in Headers */,
+				57FEAF74B70F89E738F2B6C10D78BCF6 /* UIColor+UIColorAdditions.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -1304,9 +1304,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E80AF2ED865EE8850AF6776F088E74BC /* Build configuration list for PBXNativeTarget "TPSDropDown" */;
 			buildPhases = (
-				7ECF735D0E9ED4C61A08B8B99656D9C8 /* Sources */,
+				91BD418DB2FABBD30F0C2E88F9A96F7F /* Sources */,
 				DB0109B3BD3ED2AB299E68CCDEA8F034 /* Frameworks */,
-				7ADB0AC4906E1A985235A6FBA09B5B53 /* Headers */,
+				F37A850FC7A806430B7090E570C63641 /* Headers */,
 				4385082644CDC5159B373F88426D0C85 /* Resources */,
 			);
 			buildRules = (
@@ -1519,15 +1519,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7ECF735D0E9ED4C61A08B8B99656D9C8 /* Sources */ = {
+		91BD418DB2FABBD30F0C2E88F9A96F7F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2716A435DA0E598584A0818DE004159B /* TPSDropDown-dummy.m in Sources */,
-				64F64765C86350D7ED17CBD8F7C4A3F4 /* TPSDropdownList.m in Sources */,
-				2A2E70E9B6C4F506C1A92335AF3BF451 /* TPSRoundDropdown.m in Sources */,
-				5830C6551DAAB20700CBB61A /* UIColor+UIColorAdditions.m in Sources */,
-				8A3B50966D879DCE0A77162FEF14C057 /* TPSSquareDropdown.m in Sources */,
+				A03FF2680F9BAB4FB177367B9CC9A3B5 /* TPSDropDown-dummy.m in Sources */,
+				733F91872F95CBBAD6D13E067DF94A03 /* TPSDropdownList.m in Sources */,
+				9EDCD3F78B8BFC7CA5EEFFEEA19D254A /* TPSRoundDropdown.m in Sources */,
+				CCA7796C855BA5D72DF62BF2A02FB2DF /* TPSSquareDropdown.m in Sources */,
+				C28B08CE0D9172E90646F5B9FA80344D /* UIColor+UIColorAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1695,106 +1695,57 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		093A4682240AAAE717943BC33FE6500E /* Release */ = {
+		015A368F878AC3E2CEAE21DDE8026304 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FC1549505B8F7368BDE8AFC4560E557D /* Specta.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Specta/Specta-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Specta/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Specta/Specta.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Specta;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		13B1B73620552040ADF691E37B9F293E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E8B4A58D3EF4475E2102F07F649BDE76 /* Pods-TPSDropDown_Example.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-TPSDropDown_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-TPSDropDown_Example/Pods-TPSDropDown_Example.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_TPSDropDown_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		249A4C9408ACA8CB60C2A3ABA0B5BE27 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5C0883090EE58454BBC10A7079F5C430 /* Pods-TPSDropDown_Example.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-TPSDropDown_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-TPSDropDown_Example/Pods-TPSDropDown_Example.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_TPSDropDown_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		4381FA41FCBE3D655EA6ED308CB76F26 /* Debug */ = {
+		0E12A4DAAF0F59EE336B7B29671F6CB5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B19BEB15994294C35C682A08F91C435E /* TPSDropDown.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
@@ -1819,11 +1770,275 @@
 			};
 			name = Debug;
 		};
-		439C19C0965E933E7777C9FF0B0ECD8A /* Debug */ = {
+		1A3145995A0E98BBA98E8B8B1BB0566A /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F8732DFF5A56739ADB01B84256CD630B /* pop.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/pop/pop-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/pop/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/pop/pop.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = pop;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		234C484C99B49D012835AB29015EA6C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C0883090EE58454BBC10A7079F5C430 /* Pods-TPSDropDown_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TPSDropDown_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TPSDropDown_Example/Pods-TPSDropDown_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_TPSDropDown_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		401A2B2CAE96CDE6E451D950BAB6B779 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 130F2F95CABD015CF61BB73986026D94 /* FBSnapshotTestCase.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FBSnapshotTestCase/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = FBSnapshotTestCase;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		44CDBB6D11DE06DB64D6268622BDC47E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		50C666E7541041738C20B8044DC9A94A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC1549505B8F7368BDE8AFC4560E557D /* Specta.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Specta/Specta-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Specta/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Specta/Specta.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Specta;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5E1E9F53A94CF3A550D63C3FD52E8C20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 938AED2BD3E07C19AF152E4F02EBCA42 /* Expecta+Snapshots.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Expecta+Snapshots/Expecta+Snapshots-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Expecta+Snapshots/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Expecta+Snapshots/Expecta+Snapshots.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Expecta_Snapshots;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		900DD2FD24EA17AA16BC668FE5AD2730 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC1549505B8F7368BDE8AFC4560E557D /* Specta.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Specta/Specta-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Specta/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Specta/Specta.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Specta;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		968BFEFBAFE691E262552EDDE5787C1C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B19BEB15994294C35C682A08F91C435E /* TPSDropDown.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TPSDropDown/TPSDropDown-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TPSDropDown/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TPSDropDown/TPSDropDown.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = TPSDropDown;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A55EAEAFC58A5CF8C6CC6D3F0FF20E06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8732DFF5A56739ADB01B84256CD630B /* pop.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
@@ -1848,53 +2063,44 @@
 			};
 			name = Debug;
 		};
-		47BEF9D903506B003EA5C2B249729489 /* Debug */ = {
+		AE086DCC5EE35DD57A18B9762AFA617D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 130F2F95CABD015CF61BB73986026D94 /* FBSnapshotTestCase.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_DEBUG=1",
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FBSnapshotTestCase/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				ONLY_ACTIVE_ARCH = YES;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = FBSnapshotTestCase;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		4D5200E1FB855349A66B52E3E261F0CB /* Release */ = {
+		C35704A6A32301CBEC57F36E4DA652EB /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C419B83C492F88EA8BF5C0F6DB25E78E /* Pods-TPSDropDown_Tests.release.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
@@ -1923,98 +2129,13 @@
 			};
 			name = Release;
 		};
-		4FFA579750F556B6CF836EB724CC8805 /* Release */ = {
+		DD537583E8B07D8B2A51519E8E460E8E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B19BEB15994294C35C682A08F91C435E /* TPSDropDown.xcconfig */;
+			baseConfigurationReference = BFE8F9940C0A3898127A0B9C329CF609 /* Pods-TPSDropDown_Tests.debug.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/TPSDropDown/TPSDropDown-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/TPSDropDown/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/TPSDropDown/TPSDropDown.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = TPSDropDown;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		5C199A70C50597D686C0D9DEE13040AA /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 938AED2BD3E07C19AF152E4F02EBCA42 /* Expecta+Snapshots.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Expecta+Snapshots/Expecta+Snapshots-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Expecta+Snapshots/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Expecta+Snapshots/Expecta+Snapshots.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Expecta_Snapshots;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		5C7D9576CF350F0F11A284E390D58B5A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 130F2F95CABD015CF61BB73986026D94 /* FBSnapshotTestCase.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/FBSnapshotTestCase/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = FBSnapshotTestCase;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		681764B53832A28A38AA14AE2F12877F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 938AED2BD3E07C19AF152E4F02EBCA42 /* Expecta+Snapshots.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
@@ -2023,14 +2144,85 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TPSDropDown_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TPSDropDown_Tests/Pods-TPSDropDown_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_TPSDropDown_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E5462E97D819F37DF58737EF0215EA0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 938AED2BD3E07C19AF152E4F02EBCA42 /* Expecta+Snapshots.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/Expecta+Snapshots/Expecta+Snapshots-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Expecta+Snapshots/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Expecta+Snapshots/Expecta+Snapshots.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = Expecta_Snapshots;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EFAE912C9AC205F8040F522D3E53F2DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8B4A58D3EF4475E2102F07F649BDE76 /* Pods-TPSDropDown_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TPSDropDown_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TPSDropDown_Example/Pods-TPSDropDown_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_TPSDropDown_Example;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2039,11 +2231,13 @@
 			};
 			name = Debug;
 		};
-		86B3AF85DF2958967D7E96849C2BE84C /* Debug */ = {
+		FC0E7ADB66087A0043B43F6844C76FA0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1E9D8B3481E583FA23C1840B5751B691 /* Expecta.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
@@ -2068,171 +2262,13 @@
 			};
 			name = Debug;
 		};
-		AAF678CED40D3499169D10F63CA0719E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		B82E0298A4345E48187E58D5AB5FF2F5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F8732DFF5A56739ADB01B84256CD630B /* pop.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/pop/pop-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/pop/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/pop/pop.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = pop;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		C227992525B1212103CB75D082CFFB18 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FC1549505B8F7368BDE8AFC4560E557D /* Specta.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Specta/Specta-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Specta/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Specta/Specta.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Specta;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		C64158882960F1B0B15EE3CE7E2EC93A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BFE8F9940C0A3898127A0B9C329CF609 /* Pods-TPSDropDown_Tests.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-TPSDropDown_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-TPSDropDown_Tests/Pods-TPSDropDown_Tests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_TPSDropDown_Tests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		C87753081E703738BC2CC0680107C992 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 130F2F95CABD015CF61BB73986026D94 /* FBSnapshotTestCase.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/FBSnapshotTestCase/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = FBSnapshotTestCase;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		F24F328AA1CFC9A061F629C917D03F44 /* Release */ = {
+		FDAAB66C68056AD0B9907E1E3D5674A2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1E9D8B3481E583FA23C1840B5751B691 /* Expecta.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
@@ -2263,8 +2299,8 @@
 		0FCD959BF9C64A104E114E68BA67419D /* Build configuration list for PBXNativeTarget "Expecta+Snapshots" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				681764B53832A28A38AA14AE2F12877F /* Debug */,
-				5C199A70C50597D686C0D9DEE13040AA /* Release */,
+				5E1E9F53A94CF3A550D63C3FD52E8C20 /* Debug */,
+				E5462E97D819F37DF58737EF0215EA0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2272,8 +2308,8 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				47BEF9D903506B003EA5C2B249729489 /* Debug */,
-				AAF678CED40D3499169D10F63CA0719E /* Release */,
+				015A368F878AC3E2CEAE21DDE8026304 /* Debug */,
+				44CDBB6D11DE06DB64D6268622BDC47E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2281,8 +2317,8 @@
 		579224D32E9DB76782A0B1D68C1FAF88 /* Build configuration list for PBXNativeTarget "FBSnapshotTestCase" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C87753081E703738BC2CC0680107C992 /* Debug */,
-				5C7D9576CF350F0F11A284E390D58B5A /* Release */,
+				401A2B2CAE96CDE6E451D950BAB6B779 /* Debug */,
+				AE086DCC5EE35DD57A18B9762AFA617D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2290,8 +2326,8 @@
 		5AFD2A9A313AB0732A03515B50C1C03E /* Build configuration list for PBXNativeTarget "pop" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				439C19C0965E933E7777C9FF0B0ECD8A /* Debug */,
-				B82E0298A4345E48187E58D5AB5FF2F5 /* Release */,
+				A55EAEAFC58A5CF8C6CC6D3F0FF20E06 /* Debug */,
+				1A3145995A0E98BBA98E8B8B1BB0566A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2299,8 +2335,8 @@
 		71FBF6FFB9EC2CAFDDA3F4AED2DAD5EE /* Build configuration list for PBXNativeTarget "Specta" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C227992525B1212103CB75D082CFFB18 /* Debug */,
-				093A4682240AAAE717943BC33FE6500E /* Release */,
+				900DD2FD24EA17AA16BC668FE5AD2730 /* Debug */,
+				50C666E7541041738C20B8044DC9A94A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2308,8 +2344,8 @@
 		A04B41216EE0CD8ABB3C0CD85E0DF9BD /* Build configuration list for PBXNativeTarget "Pods-TPSDropDown_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				13B1B73620552040ADF691E37B9F293E /* Debug */,
-				249A4C9408ACA8CB60C2A3ABA0B5BE27 /* Release */,
+				EFAE912C9AC205F8040F522D3E53F2DA /* Debug */,
+				234C484C99B49D012835AB29015EA6C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2317,8 +2353,8 @@
 		B2DAAE2237B8E1BEFEDB70409FDD6664 /* Build configuration list for PBXNativeTarget "Pods-TPSDropDown_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C64158882960F1B0B15EE3CE7E2EC93A /* Debug */,
-				4D5200E1FB855349A66B52E3E261F0CB /* Release */,
+				DD537583E8B07D8B2A51519E8E460E8E /* Debug */,
+				C35704A6A32301CBEC57F36E4DA652EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2326,8 +2362,8 @@
 		DC61702A42844E4ED762A73E8893436B /* Build configuration list for PBXNativeTarget "Expecta" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				86B3AF85DF2958967D7E96849C2BE84C /* Debug */,
-				F24F328AA1CFC9A061F629C917D03F44 /* Release */,
+				FC0E7ADB66087A0043B43F6844C76FA0 /* Debug */,
+				FDAAB66C68056AD0B9907E1E3D5674A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2335,8 +2371,8 @@
 		E80AF2ED865EE8850AF6776F088E74BC /* Build configuration list for PBXNativeTarget "TPSDropDown" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4381FA41FCBE3D655EA6ED308CB76F26 /* Debug */,
-				4FFA579750F556B6CF836EB724CC8805 /* Release */,
+				0E12A4DAAF0F59EE336B7B29671F6CB5 /* Debug */,
+				968BFEFBAFE691E262552EDDE5787C1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
