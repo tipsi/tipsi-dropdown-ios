@@ -10,7 +10,7 @@
 #import "TPSRoundDropdown.h"
 #import "TPSSquareDropdown.h"
 
-#define RECORDING   YES
+#define RECORDING   NO
 
 SpecBegin(InitialSpecs)
 

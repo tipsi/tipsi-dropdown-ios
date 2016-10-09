@@ -13,6 +13,7 @@
 		5830C65D1DAABC0E00CBB61A /* arrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5830C6581DAABC0E00CBB61A /* arrow@3x.png */; };
 		5830C65E1DAABC0E00CBB61A /* down-arrow-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 5830C6591DAABC0E00CBB61A /* down-arrow-white.png */; };
 		5830C65F1DAABC0E00CBB61A /* down-arrow-white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5830C65A1DAABC0E00CBB61A /* down-arrow-white@2x.png */; };
+		5830C6611DAAD27E00CBB61A /* arrow-demo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5830C6601DAAD27E00CBB61A /* arrow-demo.png */; };
 		58427EE71D50B35E006B3C75 /* ReferenceImages in Resources */ = {isa = PBXBuildFile; fileRef = 58427EE61D50B35E006B3C75 /* ReferenceImages */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
@@ -51,6 +52,7 @@
 		5830C6581DAABC0E00CBB61A /* arrow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow@3x.png"; sourceTree = "<group>"; };
 		5830C6591DAABC0E00CBB61A /* down-arrow-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "down-arrow-white.png"; sourceTree = "<group>"; };
 		5830C65A1DAABC0E00CBB61A /* down-arrow-white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "down-arrow-white@2x.png"; sourceTree = "<group>"; };
+		5830C6601DAAD27E00CBB61A /* arrow-demo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-demo.png"; sourceTree = "<group>"; };
 		58427EE61D50B35E006B3C75 /* ReferenceImages */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ReferenceImages; sourceTree = "<group>"; };
 		596D9BE964F0F09C51664DE4 /* TPSDropDown.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = TPSDropDown.podspec; path = ../TPSDropDown.podspec; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* TPSDropDown_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TPSDropDown_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,6 +159,7 @@
 		6003F594195388D20070C39A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5830C6601DAAD27E00CBB61A /* arrow-demo.png */,
 				5830C6561DAABC0E00CBB61A /* arrow.png */,
 				5830C6571DAABC0E00CBB61A /* arrow@2x.png */,
 				5830C6581DAABC0E00CBB61A /* arrow@3x.png */,
@@ -300,6 +303,7 @@
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				5830C65D1DAABC0E00CBB61A /* arrow@3x.png in Resources */,
 				5830C65E1DAABC0E00CBB61A /* down-arrow-white.png in Resources */,
+				5830C6611DAAD27E00CBB61A /* arrow-demo.png in Resources */,
 				5830C65B1DAABC0E00CBB61A /* arrow.png in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 				5830C65F1DAABC0E00CBB61A /* down-arrow-white@2x.png in Resources */,

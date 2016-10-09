@@ -103,7 +103,11 @@ static const NSUInteger SEPARATOR_TAG = 2222;
     if(ARROW_W == 0 || ARROW_H == 0){
         ARROW_W = ARROW_H = CGRectGetHeight(self.frame)/4;
     }
-    self.arrowView.frame = CGRectMake(CGRectGetWidth(self.frame)-ARROW_W*2,
+    if(self.arrowView.image){
+        ARROW_W = self.arrowView.image.size.width;
+        ARROW_H = self.arrowView.image.size.height;
+    }
+    self.arrowView.frame = CGRectMake(CGRectGetWidth(self.frame)-ARROW_W*1.5,
                                       [self elementHeight]/2 - ARROW_H/2,
                                       ARROW_W,
                                       ARROW_H);
