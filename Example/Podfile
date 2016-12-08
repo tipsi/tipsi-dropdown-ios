@@ -1,16 +1,11 @@
 use_frameworks!
 
 target 'TPSDropDown_Example' do
-  pod 'pop', '1.0.9'
-  pod 'TPSDropDown', :path => '../'
-
-  target 'TPSDropDown_Tests' do
-    inherit! :search_paths
-    pod 'pop', '1.0.9'
     pod 'TPSDropDown', :path => '../'
-    pod 'Specta'
-    pod 'Expecta'
-    pod 'FBSnapshotTestCase'
-    pod 'Expecta+Snapshots'
-  end
+
+    target 'TPSDropDown_Tests' do
+        inherit! :search_paths
+        pod 'FBSnapshotTestCase', '~> 2.1'
+        pod 'TPSDropDown', :path => '../'
+    end
 end

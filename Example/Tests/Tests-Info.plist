@@ -18,5 +18,10 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>proximanova-semibold-webfont.ttf</string>
+		<string>theserif-regular.ttf</string>
+	</array>
 </dict>
 </plist>

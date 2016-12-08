@@ -1,8 +1,8 @@
 {
   "name": "TPSDropDown",
-  "version": "0.4.0",
-  "summary": "Tipsi app dropdown element",
-  "description": "A set of classes defining dropdown element used in Tipsi app.",
+  "version": "1.0.0",
+  "summary": "Tipsi app dropdown component",
+  "description": "A set of classes defining dropdown component used in Tipsi app.",
   "homepage": "https://github.com/tipsi/tipsi-dropdown-ios",
   "license": {
     "type": "MIT",
@@ -13,17 +13,21 @@
   },
   "source": {
     "git": "https://github.com/tipsi/tipsi-dropdown-ios.git",
-    "tag": "0.4.0"
+    "tag": "1.0.0"
   },
   "platforms": {
     "ios": "8.0"
   },
   "source_files": "TPSDropDown/Classes/**/*",
-  "frameworks": "UIKit",
-  "dependencies": {
-    "pop": [
-      "1.0.9"
+  "resource_bundles": {
+    "TPSDropDownBundle": [
+      "TPSDropDown/Assets/*.*"
     ]
   },
-  "resources": "TPSDropDown/TPSDropDown.bundle"
+  "frameworks": "UIKit",
+  "dependencies": {
+    "TPSMKDropdownMenu": [
+      "~> 1.3"
+    ]
+  }
 }
