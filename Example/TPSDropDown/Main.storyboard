@@ -1,9 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="whP-gf-Uak">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11761" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Vth-xD-XMU">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -15,64 +19,82 @@
                         <viewControllerLayoutGuide type="bottom" id="Mvr-aV-6Um"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="TpU-gO-2f1">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m0b-no-Hj2" customClass="TPSDropdownList">
-                                <rect key="frame" x="150" y="38" width="300" height="32"/>
-                                <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xy1-PW-lKR">
+                                <rect key="frame" x="16" y="84" width="343" height="48"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m0b-no-Hj2" customClass="TPSDropDown">
+                                        <rect key="frame" x="8" y="8" width="103.5" height="32"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="cJQ-uA-0fc"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="So2-eU-acY" customClass="TPSSquareDropDown">
+                                        <rect key="frame" x="119.5" y="8" width="104" height="32"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pTZ-Gf-Q54" customClass="TPSRoundDropDown">
+                                        <rect key="frame" x="231.5" y="8" width="103.5" height="32"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="4ZW-28-jpH"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="So2-eU-acY" customClass="TPSSquareDropdown">
-                                <rect key="frame" x="150" y="150" width="300" height="32"/>
-                                <color key="backgroundColor" red="0.86274509803921573" green="0.86274509803921573" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="6Vb-Ah-fK5"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pTZ-Gf-Q54" customClass="TPSRoundDropdown">
-                                <rect key="frame" x="150" y="262" width="300" height="32"/>
-                                <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="wBq-4e-GTw"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0rX-Ly-W3e" customClass="TPSDropdownList">
-                                <rect key="frame" x="246" y="364" width="109" height="32"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="3fQ-B5-W43"/>
-                                    <constraint firstAttribute="width" constant="109" id="k4J-D0-xSf"/>
+                                    <constraint firstItem="pTZ-Gf-Q54" firstAttribute="leading" secondItem="So2-eU-acY" secondAttribute="trailing" constant="8" id="BM3-qR-aZa"/>
+                                    <constraint firstItem="So2-eU-acY" firstAttribute="top" secondItem="xy1-PW-lKR" secondAttribute="topMargin" id="LBD-IF-9dm"/>
+                                    <constraint firstItem="pTZ-Gf-Q54" firstAttribute="bottom" secondItem="xy1-PW-lKR" secondAttribute="bottomMargin" id="Ma8-pS-mC7"/>
+                                    <constraint firstItem="m0b-no-Hj2" firstAttribute="height" secondItem="pTZ-Gf-Q54" secondAttribute="height" id="U8F-J8-aae"/>
+                                    <constraint firstItem="pTZ-Gf-Q54" firstAttribute="trailing" secondItem="xy1-PW-lKR" secondAttribute="trailingMargin" id="UML-oY-PdI"/>
+                                    <constraint firstItem="m0b-no-Hj2" firstAttribute="top" secondItem="xy1-PW-lKR" secondAttribute="topMargin" id="VxK-wQ-56V"/>
+                                    <constraint firstItem="m0b-no-Hj2" firstAttribute="width" secondItem="So2-eU-acY" secondAttribute="width" id="Vzd-Eb-X0l"/>
+                                    <constraint firstItem="So2-eU-acY" firstAttribute="bottom" secondItem="xy1-PW-lKR" secondAttribute="bottomMargin" id="aZh-5N-gKQ"/>
+                                    <constraint firstItem="m0b-no-Hj2" firstAttribute="leading" secondItem="xy1-PW-lKR" secondAttribute="leadingMargin" id="ffw-qM-LuT"/>
+                                    <constraint firstItem="m0b-no-Hj2" firstAttribute="bottom" secondItem="xy1-PW-lKR" secondAttribute="bottomMargin" id="hSS-Z2-laC"/>
+                                    <constraint firstItem="m0b-no-Hj2" firstAttribute="width" secondItem="pTZ-Gf-Q54" secondAttribute="width" id="iZ3-Qr-oq9"/>
+                                    <constraint firstItem="pTZ-Gf-Q54" firstAttribute="top" secondItem="xy1-PW-lKR" secondAttribute="topMargin" id="lyZ-dX-B2Z"/>
+                                    <constraint firstItem="m0b-no-Hj2" firstAttribute="height" secondItem="So2-eU-acY" secondAttribute="height" id="p4K-su-1Qo"/>
+                                    <constraint firstItem="So2-eU-acY" firstAttribute="leading" secondItem="m0b-no-Hj2" secondAttribute="trailing" constant="8" id="wXL-f8-Ll3"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.90980392156862744" green="0.89411764705882346" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="So2-eU-acY" firstAttribute="width" secondItem="TpU-gO-2f1" secondAttribute="width" multiplier="0.5" id="4LI-Rn-dWY"/>
-                            <constraint firstItem="m0b-no-Hj2" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="8J7-Av-euD"/>
-                            <constraint firstItem="0rX-Ly-W3e" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="CAE-gX-qW4"/>
-                            <constraint firstItem="pTZ-Gf-Q54" firstAttribute="width" secondItem="TpU-gO-2f1" secondAttribute="width" multiplier="0.5" id="Cho-lK-cqN"/>
-                            <constraint firstItem="So2-eU-acY" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="Irr-Ly-PZw"/>
-                            <constraint firstItem="m0b-no-Hj2" firstAttribute="width" secondItem="TpU-gO-2f1" secondAttribute="width" multiplier="0.5" id="P2J-ge-b3Z"/>
-                            <constraint firstItem="0rX-Ly-W3e" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="344" id="POI-RK-O6t"/>
-                            <constraint firstItem="m0b-no-Hj2" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="18" id="SI3-eS-Dt1"/>
-                            <constraint firstItem="pTZ-Gf-Q54" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="byo-ys-Qs6"/>
-                            <constraint firstItem="pTZ-Gf-Q54" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="242" id="mfD-Wt-hdB"/>
-                            <constraint firstItem="So2-eU-acY" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="130" id="zab-Dj-Qst"/>
+                            <constraint firstItem="xy1-PW-lKR" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="20" id="5Af-7V-lhp"/>
+                            <constraint firstItem="xy1-PW-lKR" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leadingMargin" id="ZiI-fS-htW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xy1-PW-lKR" secondAttribute="trailing" id="yuE-g4-chL"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="oWX-41-S0W"/>
                     <connections>
-                        <outlet property="demoDropdown" destination="0rX-Ly-W3e" id="dQX-TZ-YDN"/>
-                        <outlet property="roundDropdown" destination="pTZ-Gf-Q54" id="dEY-lz-1WQ"/>
-                        <outlet property="simpleDropdown" destination="m0b-no-Hj2" id="fn1-87-xCV"/>
-                        <outlet property="squareDropdown" destination="So2-eU-acY" id="tOE-98-ZRB"/>
+                        <outlet property="dropDown" destination="m0b-no-Hj2" id="a5Y-5p-t0C"/>
+                        <outlet property="roundDropDown" destination="pTZ-Gf-Q54" id="wbR-LX-lvT"/>
+                        <outlet property="squareDropDown" destination="So2-eU-acY" id="ZZ3-SW-VLK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="433"/>
+            <point key="canvasLocation" x="1244" y="432.23388305847078"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="I5f-eo-k6a">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vth-xD-XMU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="A2c-r2-vFJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="whP-gf-Uak" kind="relationship" relationship="rootViewController" id="PnJ-rk-NSL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6db-5i-eYV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304.80000000000001" y="432.23388305847078"/>
         </scene>
     </scenes>
 </document>

@@ -2,35 +2,39 @@
 //  TPSViewController.m
 //  TPSDropDown
 //
-//  Created by Sergey Yuzepovich on 08/01/2016.
-//  Copyright (c) 2016 Sergey Yuzepovich. All rights reserved.
+//  Created by Dmytro Zavgorodniy on 12/7/16.
+//  Copyright (c) 2016 Tipsi. All rights reserved.
 //
 
 #import "TPSViewController.h"
-#import "TPSDropdownList.h"
-#import "TPSSquareDropdown.h"
-#import "TPSRoundDropdown.h"
+
+#import <TPSDropDown/TPSDropDown.h>
+#import <TPSDropDown/TPSRoundDropDown.h>
+#import <TPSDropDown/TPSSquareDropDown.h>
 
 @interface TPSViewController ()
-@property (weak, nonatomic) IBOutlet TPSDropdownList *simpleDropdown;
-@property (weak, nonatomic) IBOutlet TPSSquareDropdown *squareDropdown;
-@property (weak, nonatomic) IBOutlet TPSRoundDropdown *roundDropdown;
-@property (weak, nonatomic) IBOutlet TPSRoundDropdown *demoDropdown;
+
+@property (weak, nonatomic) IBOutlet TPSDropDown *dropDown;
+@property (weak, nonatomic) IBOutlet TPSSquareDropDown *squareDropDown;
+@property (weak, nonatomic) IBOutlet TPSRoundDropDown *roundDropDown;
+
 @end
 
 @implementation TPSViewController
 
-- (void)viewDidLoad{
-    [super viewDidLoad];
-    [self.simpleDropdown setupWithElements:@[@"One", @"Two", @"Three"]];
-    [self.squareDropdown setupWithElements:@[@"One", @"Two", @"Three"]];
-    [self.roundDropdown setupWithElements:@[@"One", @"Two", @"Three"]];
-    [self.demoDropdown setupWithElements:@[@"New", @"Two", @"Three"]];
+#pragma mark - UIViewController
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
     
-    [self.simpleDropdown applyStyleJson:@"{\"style\":{\"backgroundColor\":\"0x00ffff\",\"borderWidth\":3,\"borderColor\":\"0xffff00\",\"cornerRadius\":5,\"separatorHeight\":1,\"separatorColor\":\"0xAA00AA\",\"fontName\":\"Arial\",\"fontSize\":18,\"textColor\":\"0xCCCCCC\",\"textAlignment\":\"Center\",\"indicatorImageName\":\"arrow\"}}"];
+    self.dropDown.items = @[@"One", @"Two", @"Three"];
+    self.dropDown.selectedItemIndex = 0;
     
-    [self.demoDropdown applyStyleJson:@"{\"style\":{\"fontName\":\"Arial\",\"fontSize\":18,\"textColor\":\"0x68172D\",\"textAlignment\":\"Center\",\"indicatorImageName\":\"arrow-demo\"}}"];
+    self.squareDropDown.items = @[@"One", @"Two", @"Three"];
+    self.squareDropDown.selectedItemIndex = 0;
+    
+    self.roundDropDown.items = @[@"One", @"Two", @"Three"];
+    self.roundDropDown.selectedItemIndex = 0;
 }
 
 @end

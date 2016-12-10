@@ -1,0 +1,6 @@
+framework module TPSMKDropdownMenu {
+  umbrella header "TPSMKDropdownMenu-umbrella.h"
+
+  export *
+  module * { export * }
+}

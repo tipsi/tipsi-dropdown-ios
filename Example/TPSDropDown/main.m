@@ -2,8 +2,8 @@
 //  main.m
 //  TPSDropDown
 //
-//  Created by Sergey Yuzepovich on 08/01/2016.
-//  Copyright (c) 2016 Sergey Yuzepovich. All rights reserved.
+//  Created by Dmytro Zavgorodniy on 12/7/16.
+//  Copyright (c) 2016 Tipsi. All rights reserved.
 //
 
 @import UIKit;
