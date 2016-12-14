@@ -18,7 +18,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'TPSDropDown'
+pod 'TPSDropDown', '~> 1.0'
 ```
 
 ## Usage
