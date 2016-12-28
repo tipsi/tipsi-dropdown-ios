@@ -26,11 +26,16 @@
 
 @protocol TPSDropDownItem <NSObject>
 
-@required
+@optional
 
 /// Title, which will show in dropdown.
 - (NSString *)title;
 
+/// Attributed Title, which will show in dropdown.
+- (NSAttributedString *)attributedTitle;
+
+/// Icon
+- (NSString*)iconName;
 @end
 
 @interface TPSDropDown : UIView

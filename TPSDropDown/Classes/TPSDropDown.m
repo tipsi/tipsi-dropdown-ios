@@ -180,25 +180,72 @@ static void * TPSDropDownBoundsChangeContext = &TPSDropDownBoundsChangeContext;
 - (nullable NSAttributedString *)dropdownMenu:(MKDropdownMenu *)dropdownMenu attributedTitleForComponent:(NSInteger)component {
     id <TPSDropDownItem> selectedItem = [self p_selectedItem];
     
-    NSString *string = [selectedItem title] ?: @"";
-    
-    NSMutableDictionary *attributes = [[NSMutableDictionary alloc] init];
-    [attributes setValue:self.font forKey:NSFontAttributeName];
-    [attributes setValue:self.textColor forKey:NSForegroundColorAttributeName];
-    
-    return [[NSAttributedString alloc] initWithString:string attributes:[attributes copy]];
+    if ([selectedItem attributedTitle]) {
+        return [selectedItem attributedTitle];
+    } else {
+        NSString *string = [selectedItem title] ?: @"";
+        
+        NSMutableDictionary *attributes = [[NSMutableDictionary alloc] init];
+        [attributes setValue:self.font forKey:NSFontAttributeName];
+        [attributes setValue:self.textColor forKey:NSForegroundColorAttributeName];
+        
+        return [[NSAttributedString alloc] initWithString:string attributes:[attributes copy]];
+    }
 }
 
 - (nullable NSAttributedString *)dropdownMenu:(MKDropdownMenu *)dropdownMenu attributedTitleForRow:(NSInteger)row forComponent:(NSInteger)component {
     id <TPSDropDownItem> item = [self p_itemAtIndex:row];
     
-    NSString *string = [item title] ?: @"";
-    
-    NSMutableDictionary *attributes = [[NSMutableDictionary alloc] init];
-    [attributes setValue:self.font forKey:NSFontAttributeName];
-    [attributes setValue:self.textColor forKey:NSForegroundColorAttributeName];
-    
-    return [[NSAttributedString alloc] initWithString:string attributes:[attributes copy]];
+    if ([item attributedTitle]) {
+        return [item attributedTitle];
+    } else {
+        NSString *string = [item title] ?: @"";
+        
+        NSMutableDictionary *attributes = [[NSMutableDictionary alloc] init];
+        [attributes setValue:self.font forKey:NSFontAttributeName];
+        [attributes setValue:self.textColor forKey:NSForegroundColorAttributeName];
+        
+        return [[NSAttributedString alloc] initWithString:string attributes:[attributes copy]];
+    }
+}
+
+- (UIView *)dropdownMenu:(MKDropdownMenu *)dropdownMenu viewForComponent:(NSInteger)component {
+    id <TPSDropDownItem> selectedItem = [self p_selectedItem];
+    if ([selectedItem iconName]) {
+        UIView *customView = [[UIView alloc] initWithFrame:CGRectMake(0.f, 0.f, CGRectGetWidth(dropdownMenu.bounds), CGRectGetHeight(dropdownMenu.bounds))];
+        customView.backgroundColor = [UIColor clearColor];
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10.f, 0.f, 24.f, CGRectGetHeight(customView.bounds))];
+        imageView.image = [[selectedItem iconName] length] ? [[UIImage imageNamed:[selectedItem iconName]] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] : nil;
+        imageView.contentMode = UIViewContentModeScaleAspectFit;
+        [customView addSubview:imageView];
+        UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(44.f, 0.f, CGRectGetWidth(customView.bounds) - 49, CGRectGetHeight(customView.bounds))];
+        titleLabel.numberOfLines = 0;
+        titleLabel.attributedText = [self dropdownMenu:dropdownMenu attributedTitleForComponent:component];
+        [customView addSubview:titleLabel];
+        imageView.tintColor = self.tintColor;
+        return customView;
+    }
+    return nil;
+
+}
+
+- (UIView *)dropdownMenu:(MKDropdownMenu *)dropdownMenu viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view {
+    id <TPSDropDownItem> item = [self p_itemAtIndex:row];
+    if ([item iconName]) {
+        UIView *customView = [[UIView alloc] initWithFrame:CGRectMake(0.f, 0.f, CGRectGetWidth(dropdownMenu.bounds), CGRectGetHeight(dropdownMenu.bounds))];
+        customView.backgroundColor = [UIColor clearColor];
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10.f, 0.f, 24.f, CGRectGetHeight(customView.bounds))];
+        imageView.image = [[item iconName] length] ? [[UIImage imageNamed:[item iconName]] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] : nil;
+        imageView.contentMode = UIViewContentModeScaleAspectFit;
+        [customView addSubview:imageView];
+        UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(44.f, 0.f, CGRectGetWidth(customView.bounds) - 49, CGRectGetHeight(customView.bounds))];
+        titleLabel.numberOfLines = 0;
+        titleLabel.attributedText = [self dropdownMenu:dropdownMenu attributedTitleForRow:row forComponent:component];
+        [customView addSubview:titleLabel];
+        imageView.tintColor = self.tintColor;
+        return customView;
+    }
+    return nil;
 }
 
 - (void)dropdownMenu:(MKDropdownMenu *)dropdownMenu didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
