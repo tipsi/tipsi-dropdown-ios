@@ -26,7 +26,7 @@
 
 @protocol TPSDropDownItem <NSObject>
 
-@optional
+@required
 
 /// Title, which will show in dropdown.
 - (NSString *)title;

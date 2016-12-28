@@ -17,6 +17,52 @@ static void * TPSDropDownBoundsChangeContext = &TPSDropDownBoundsChangeContext;
 
 @end
 
+#pragma mark - Custom content view
+static CGFloat TPSDropDownContentViewOffset = 10.f;
+static CGSize  TPSDropDownContentViewIconSize = {24.f, 24.f};
+
+@interface TPSDropDownContentView : UIView
+
+@property (nonatomic, strong) UILabel *titleLabel;
+@property (nonatomic, strong) UIImageView *iconImageView;
+
+@end
+
+@implementation TPSDropDownContentView
+- (instancetype)initWithFrame:(CGRect)frame {
+    if (self = [super initWithFrame:frame]) {
+        self.backgroundColor = [UIColor clearColor];
+        self.iconImageView = [[UIImageView alloc] initWithFrame:
+                              CGRectMake(TPSDropDownContentViewOffset,
+                                         0.f,
+                                         TPSDropDownContentViewIconSize.width,
+                                         CGRectGetHeight(frame))
+                              ];
+        self.iconImageView.contentMode = UIViewContentModeScaleAspectFit;
+        [self addSubview:self.iconImageView];
+        CGFloat titleXPosition = (CGRectGetMaxX(self.iconImageView.frame) + TPSDropDownContentViewOffset);
+        self.titleLabel = [[UILabel alloc] initWithFrame:
+                           CGRectMake(titleXPosition,
+                                      0.f,
+                                      (CGRectGetWidth(frame) - (titleXPosition + TPSDropDownContentViewOffset)),
+                                      CGRectGetHeight(frame))
+                           ];
+        self.titleLabel.numberOfLines = 0;
+        [self addSubview:self.titleLabel];
+    }
+    return self;
+}
+
+- (void)updateWithAttributedText:(NSAttributedString*)attributedText iconName:(NSString*)iconName {
+    self.iconImageView.image = [iconName length] ? [[UIImage imageNamed:iconName] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] : nil;
+    self.iconImageView.tintColor = self.tintColor;
+    self.titleLabel.attributedText = attributedText;
+}
+
+@end
+
+#pragma mark -
+
 @implementation TPSDropDown
 
 #pragma mark - Initialization
@@ -212,18 +258,10 @@ static void * TPSDropDownBoundsChangeContext = &TPSDropDownBoundsChangeContext;
 - (UIView *)dropdownMenu:(MKDropdownMenu *)dropdownMenu viewForComponent:(NSInteger)component {
     id <TPSDropDownItem> selectedItem = [self p_selectedItem];
     if ([selectedItem iconName]) {
-        UIView *customView = [[UIView alloc] initWithFrame:CGRectMake(0.f, 0.f, CGRectGetWidth(dropdownMenu.bounds), CGRectGetHeight(dropdownMenu.bounds))];
-        customView.backgroundColor = [UIColor clearColor];
-        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10.f, 0.f, 24.f, CGRectGetHeight(customView.bounds))];
-        imageView.image = [[selectedItem iconName] length] ? [[UIImage imageNamed:[selectedItem iconName]] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] : nil;
-        imageView.contentMode = UIViewContentModeScaleAspectFit;
-        [customView addSubview:imageView];
-        UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(44.f, 0.f, CGRectGetWidth(customView.bounds) - 49, CGRectGetHeight(customView.bounds))];
-        titleLabel.numberOfLines = 0;
-        titleLabel.attributedText = [self dropdownMenu:dropdownMenu attributedTitleForComponent:component];
-        [customView addSubview:titleLabel];
-        imageView.tintColor = self.tintColor;
-        return customView;
+        TPSDropDownContentView *contentView = [[TPSDropDownContentView alloc] initWithFrame:dropdownMenu.bounds];
+        contentView.tintColor = self.tintColor;
+        [contentView updateWithAttributedText:[self dropdownMenu:dropdownMenu attributedTitleForComponent:component] iconName:[selectedItem iconName]];
+        return contentView;
     }
     return nil;
 
@@ -232,18 +270,13 @@ static void * TPSDropDownBoundsChangeContext = &TPSDropDownBoundsChangeContext;
 - (UIView *)dropdownMenu:(MKDropdownMenu *)dropdownMenu viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view {
     id <TPSDropDownItem> item = [self p_itemAtIndex:row];
     if ([item iconName]) {
-        UIView *customView = [[UIView alloc] initWithFrame:CGRectMake(0.f, 0.f, CGRectGetWidth(dropdownMenu.bounds), CGRectGetHeight(dropdownMenu.bounds))];
-        customView.backgroundColor = [UIColor clearColor];
-        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10.f, 0.f, 24.f, CGRectGetHeight(customView.bounds))];
-        imageView.image = [[item iconName] length] ? [[UIImage imageNamed:[item iconName]] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] : nil;
-        imageView.contentMode = UIViewContentModeScaleAspectFit;
-        [customView addSubview:imageView];
-        UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(44.f, 0.f, CGRectGetWidth(customView.bounds) - 49, CGRectGetHeight(customView.bounds))];
-        titleLabel.numberOfLines = 0;
-        titleLabel.attributedText = [self dropdownMenu:dropdownMenu attributedTitleForRow:row forComponent:component];
-        [customView addSubview:titleLabel];
-        imageView.tintColor = self.tintColor;
-        return customView;
+        TPSDropDownContentView *contentView = (TPSDropDownContentView*)view;
+        if (!contentView) {
+            contentView = [[TPSDropDownContentView alloc] initWithFrame:dropdownMenu.bounds];
+            contentView.tintColor = self.tintColor;
+        }
+        [contentView updateWithAttributedText:[self dropdownMenu:dropdownMenu attributedTitleForRow:row forComponent:component] iconName:[item iconName]];
+        return contentView;
     }
     return nil;
 }
