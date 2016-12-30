@@ -17,6 +17,52 @@ static void * TPSDropDownBoundsChangeContext = &TPSDropDownBoundsChangeContext;
 
 @end
 
+#pragma mark - Custom content view
+static CGFloat TPSDropDownContentViewOffset = 10.f;
+static CGSize  TPSDropDownContentViewIconSize = {24.f, 24.f};
+
+@interface TPSDropDownContentView : UIView
+
+@property (nonatomic, strong) UILabel *titleLabel;
+@property (nonatomic, strong) UIImageView *iconImageView;
+
+@end
+
+@implementation TPSDropDownContentView
+- (instancetype)initWithFrame:(CGRect)frame {
+    if (self = [super initWithFrame:frame]) {
+        self.backgroundColor = [UIColor clearColor];
+        self.iconImageView = [[UIImageView alloc] initWithFrame:
+                              CGRectMake(TPSDropDownContentViewOffset,
+                                         0.f,
+                                         TPSDropDownContentViewIconSize.width,
+                                         CGRectGetHeight(frame))
+                              ];
+        self.iconImageView.contentMode = UIViewContentModeScaleAspectFit;
+        [self addSubview:self.iconImageView];
+        CGFloat titleXPosition = (CGRectGetMaxX(self.iconImageView.frame) + TPSDropDownContentViewOffset);
+        self.titleLabel = [[UILabel alloc] initWithFrame:
+                           CGRectMake(titleXPosition,
+                                      0.f,
+                                      (CGRectGetWidth(frame) - (titleXPosition + TPSDropDownContentViewOffset)),
+                                      CGRectGetHeight(frame))
+                           ];
+        self.titleLabel.numberOfLines = 0;
+        [self addSubview:self.titleLabel];
+    }
+    return self;
+}
+
+- (void)updateWithAttributedText:(NSAttributedString*)attributedText iconName:(NSString*)iconName {
+    self.iconImageView.image = [iconName length] ? [[UIImage imageNamed:iconName] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] : nil;
+    self.iconImageView.tintColor = self.tintColor;
+    self.titleLabel.attributedText = attributedText;
+}
+
+@end
+
+#pragma mark -
+
 @implementation TPSDropDown
 
 #pragma mark - Initialization
@@ -144,6 +190,16 @@ static void * TPSDropDownBoundsChangeContext = &TPSDropDownBoundsChangeContext;
     [self p_reloadData];
 }
 
+#pragma mark - Open DropDown
+
+- (void)openDropDown:(BOOL)animated {
+    [self.dropdownMenu openComponent:0 animated:animated];
+}
+
+- (void)closeDropDown:(BOOL)animated {
+    [self.dropdownMenu closeAllComponentsAnimated:animated];
+}
+
 #pragma mark - UIView
 
 - (void)setBackgroundColor:(UIColor *)backgroundColor {
@@ -180,25 +236,59 @@ static void * TPSDropDownBoundsChangeContext = &TPSDropDownBoundsChangeContext;
 - (nullable NSAttributedString *)dropdownMenu:(MKDropdownMenu *)dropdownMenu attributedTitleForComponent:(NSInteger)component {
     id <TPSDropDownItem> selectedItem = [self p_selectedItem];
     
-    NSString *string = [selectedItem title] ?: @"";
-    
-    NSMutableDictionary *attributes = [[NSMutableDictionary alloc] init];
-    [attributes setValue:self.font forKey:NSFontAttributeName];
-    [attributes setValue:self.textColor forKey:NSForegroundColorAttributeName];
-    
-    return [[NSAttributedString alloc] initWithString:string attributes:[attributes copy]];
+    if ([selectedItem attributedTitle]) {
+        return [selectedItem attributedTitle];
+    } else {
+        NSString *string = [selectedItem title] ?: @"";
+        
+        NSMutableDictionary *attributes = [[NSMutableDictionary alloc] init];
+        [attributes setValue:self.font forKey:NSFontAttributeName];
+        [attributes setValue:self.textColor forKey:NSForegroundColorAttributeName];
+        
+        return [[NSAttributedString alloc] initWithString:string attributes:[attributes copy]];
+    }
 }
 
 - (nullable NSAttributedString *)dropdownMenu:(MKDropdownMenu *)dropdownMenu attributedTitleForRow:(NSInteger)row forComponent:(NSInteger)component {
     id <TPSDropDownItem> item = [self p_itemAtIndex:row];
     
-    NSString *string = [item title] ?: @"";
-    
-    NSMutableDictionary *attributes = [[NSMutableDictionary alloc] init];
-    [attributes setValue:self.font forKey:NSFontAttributeName];
-    [attributes setValue:self.textColor forKey:NSForegroundColorAttributeName];
-    
-    return [[NSAttributedString alloc] initWithString:string attributes:[attributes copy]];
+    if ([item attributedTitle]) {
+        return [item attributedTitle];
+    } else {
+        NSString *string = [item title] ?: @"";
+        
+        NSMutableDictionary *attributes = [[NSMutableDictionary alloc] init];
+        [attributes setValue:self.font forKey:NSFontAttributeName];
+        [attributes setValue:self.textColor forKey:NSForegroundColorAttributeName];
+        
+        return [[NSAttributedString alloc] initWithString:string attributes:[attributes copy]];
+    }
+}
+
+- (UIView *)dropdownMenu:(MKDropdownMenu *)dropdownMenu viewForComponent:(NSInteger)component {
+    id <TPSDropDownItem> selectedItem = [self p_selectedItem];
+    if ([selectedItem iconName]) {
+        TPSDropDownContentView *contentView = [[TPSDropDownContentView alloc] initWithFrame:dropdownMenu.bounds];
+        contentView.tintColor = self.tintColor;
+        [contentView updateWithAttributedText:[self dropdownMenu:dropdownMenu attributedTitleForComponent:component] iconName:[selectedItem iconName]];
+        return contentView;
+    }
+    return nil;
+
+}
+
+- (UIView *)dropdownMenu:(MKDropdownMenu *)dropdownMenu viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view {
+    id <TPSDropDownItem> item = [self p_itemAtIndex:row];
+    if ([item iconName]) {
+        TPSDropDownContentView *contentView = (TPSDropDownContentView*)view;
+        if (!contentView) {
+            contentView = [[TPSDropDownContentView alloc] initWithFrame:dropdownMenu.bounds];
+            contentView.tintColor = self.tintColor;
+        }
+        [contentView updateWithAttributedText:[self dropdownMenu:dropdownMenu attributedTitleForRow:row forComponent:component] iconName:[item iconName]];
+        return contentView;
+    }
+    return nil;
 }
 
 - (void)dropdownMenu:(MKDropdownMenu *)dropdownMenu didSelectRow:(NSInteger)row inComponent:(NSInteger)component {

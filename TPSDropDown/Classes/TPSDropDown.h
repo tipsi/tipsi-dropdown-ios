@@ -31,6 +31,11 @@
 /// Title, which will show in dropdown.
 - (NSString *)title;
 
+/// Attributed Title, which will show in dropdown.
+- (NSAttributedString *)attributedTitle;
+
+/// Icon
+- (NSString*)iconName;
 @end
 
 @interface TPSDropDown : UIView
@@ -93,4 +98,9 @@
 /// Default = NO.
 @property (nonatomic, assign) BOOL showShadow;
 
+///Expand DropDown
+- (void)openDropDown:(BOOL)animated;
+
+///Close DropDown
+- (void)closeDropDown:(BOOL)animated;
 @end

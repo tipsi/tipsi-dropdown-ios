@@ -21,6 +21,11 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		62376C80B690B4F0A3184C73 /* Pods_TPSDropDown_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F19BBE24005C855CBF36D78 /* Pods_TPSDropDown_Example.framework */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		990EF5BE1E150FDB00FCEC9B /* TPSNSAttributedStringTPSDropDownItemTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 990EF5BD1E150FDB00FCEC9B /* TPSNSAttributedStringTPSDropDownItemTests.m */; };
+		990EF5C01E1519FF00FCEC9B /* TPSDropDownSnapshotTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 990EF5BF1E1519FF00FCEC9B /* TPSDropDownSnapshotTests.m */; };
+		990EF5C11E151B9400FCEC9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		990EF5D01E16521000FCEC9B /* TPSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* TPSViewController.m */; };
+		990EF5D11E16738600FCEC9B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		B8198F0F1DF852FA00C8AD1B /* TPSNSStringTPSDropDownItemTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B8198ED61DF83ED900C8AD1B /* TPSNSStringTPSDropDownItemTests.m */; };
 		B8198F101DF852FA00C8AD1B /* TPSDropDownTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B8198F091DF8425700C8AD1B /* TPSDropDownTests.m */; };
 		B8198F111DF852FA00C8AD1B /* TPSRoundDropDownTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B8198F0B1DF8426600C8AD1B /* TPSRoundDropDownTests.m */; };
@@ -70,6 +75,8 @@
 		6C4421A98A3E310918D7A19F /* Pods-TPSDropDown_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TPSDropDown_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TPSDropDown_Tests/Pods-TPSDropDown_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		6F8338D75C58CC4E77EDBF22 /* Pods_TPSDropDown_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TPSDropDown_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		990EF5BD1E150FDB00FCEC9B /* TPSNSAttributedStringTPSDropDownItemTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPSNSAttributedStringTPSDropDownItemTests.m; sourceTree = "<group>"; };
+		990EF5BF1E1519FF00FCEC9B /* TPSDropDownSnapshotTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPSDropDownSnapshotTests.m; sourceTree = "<group>"; };
 		A5BCF57DBA8D77AB80CA46FB /* Pods-TPSDropDown_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TPSDropDown_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-TPSDropDown_Example/Pods-TPSDropDown_Example.release.xcconfig"; sourceTree = "<group>"; };
 		B8198ED61DF83ED900C8AD1B /* TPSNSStringTPSDropDownItemTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPSNSStringTPSDropDownItemTests.m; sourceTree = "<group>"; };
 		B8198F091DF8425700C8AD1B /* TPSDropDownTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPSDropDownTests.m; sourceTree = "<group>"; };
@@ -175,9 +182,11 @@
 			children = (
 				6003F5B6195388D20070C39A /* Supporting Files */,
 				B8198ED61DF83ED900C8AD1B /* TPSNSStringTPSDropDownItemTests.m */,
+				990EF5BD1E150FDB00FCEC9B /* TPSNSAttributedStringTPSDropDownItemTests.m */,
 				B8198F091DF8425700C8AD1B /* TPSDropDownTests.m */,
 				B8198F0B1DF8426600C8AD1B /* TPSRoundDropDownTests.m */,
 				B8198F0D1DF8427300C8AD1B /* TPSSquareDropDownTests.m */,
+				990EF5BF1E1519FF00FCEC9B /* TPSDropDownSnapshotTests.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -311,8 +320,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8198F171DF85DDD00C8AD1B /* proximanova-semibold-webfont.ttf in Resources */,
+				990EF5D11E16738600FCEC9B /* Images.xcassets in Resources */,
 				B8198F181DF85DDF00C8AD1B /* theserif-regular.ttf in Resources */,
 				6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */,
+				990EF5C11E151B9400FCEC9B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,10 +437,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				990EF5C01E1519FF00FCEC9B /* TPSDropDownSnapshotTests.m in Sources */,
 				B8198F0F1DF852FA00C8AD1B /* TPSNSStringTPSDropDownItemTests.m in Sources */,
 				B8198F101DF852FA00C8AD1B /* TPSDropDownTests.m in Sources */,
 				B8198F111DF852FA00C8AD1B /* TPSRoundDropDownTests.m in Sources */,
+				990EF5D01E16521000FCEC9B /* TPSViewController.m in Sources */,
 				B8198F121DF852FA00C8AD1B /* TPSSquareDropDownTests.m in Sources */,
+				990EF5BE1E150FDB00FCEC9B /* TPSNSAttributedStringTPSDropDownItemTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,4 +15,12 @@
     return self;
 }
 
+- (NSAttributedString *)attributedTitle {
+    return nil;
+}
+
+- (NSString *)iconName {
+    return nil;
+}
+
 @end

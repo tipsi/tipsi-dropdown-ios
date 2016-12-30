@@ -35,4 +35,27 @@
     XCTAssertEqualObjects(sut, string);
 }
 
+- (void)testInstanceOfNSStringShouldImplementAttributedTitle {
+    NSString *sut = [[NSString alloc] init];
+    XCTAssertTrue([sut respondsToSelector:@selector(attributedTitle)]);
+}
+
+- (void)testInstanceOfNSStringShouldReturnNilInTPSDropDownItemAttributedTitleMethod {
+    NSString *string = @"string";
+    NSAttributedString *sut = [string attributedTitle];
+    XCTAssertNil(sut);
+}
+
+- (void)testInstanceOfNSStringShouldImplementIconName {
+    NSString *sut = [[NSString alloc] init];
+    XCTAssertTrue([sut respondsToSelector:@selector(iconName)]);
+}
+
+- (void)testInstanceOfNSStringShouldReturnNilInTPSDropDownItemIconName {
+    NSString *string = @"string";
+    NSString *sut = [string iconName];
+    XCTAssertNil(sut);
+}
+
+
 @end
