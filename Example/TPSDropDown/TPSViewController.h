@@ -7,7 +7,10 @@
 //
 
 @import UIKit;
+@import TPSDropDown;
 
 @interface TPSViewController : UIViewController
-
+- (void)openDropDown;
+- (void)openPaymentDropDown;
+- (void)closeAllDropDowns;
 @end

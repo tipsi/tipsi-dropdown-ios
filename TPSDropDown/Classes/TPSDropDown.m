@@ -190,6 +190,16 @@ static CGSize  TPSDropDownContentViewIconSize = {24.f, 24.f};
     [self p_reloadData];
 }
 
+#pragma mark - Open DropDown
+
+- (void)openDropDown:(BOOL)animated {
+    [self.dropdownMenu openComponent:0 animated:animated];
+}
+
+- (void)closeDropDown:(BOOL)animated {
+    [self.dropdownMenu closeAllComponentsAnimated:animated];
+}
+
 #pragma mark - UIView
 
 - (void)setBackgroundColor:(UIColor *)backgroundColor {

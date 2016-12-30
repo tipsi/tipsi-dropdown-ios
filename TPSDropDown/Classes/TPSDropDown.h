@@ -98,4 +98,9 @@
 /// Default = NO.
 @property (nonatomic, assign) BOOL showShadow;
 
+///Expand DropDown
+- (void)openDropDown:(BOOL)animated;
+
+///Close DropDown
+- (void)closeDropDown:(BOOL)animated;
 @end

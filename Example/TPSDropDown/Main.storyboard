@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11761" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Vth-xD-XMU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Vth-xD-XMU">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="wQg-tq-qST">
             <objects>
-                <viewController id="whP-gf-Uak" customClass="TPSViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TPSViewController" id="whP-gf-Uak" customClass="TPSViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uEw-UM-LJ8"/>
                         <viewControllerLayoutGuide type="bottom" id="Mvr-aV-6Um"/>
@@ -59,17 +58,39 @@
                                     <constraint firstItem="So2-eU-acY" firstAttribute="leading" secondItem="m0b-no-Hj2" secondAttribute="trailing" constant="8" id="wXL-f8-Ll3"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U82-vx-SRE">
+                                <rect key="frame" x="16" y="140" width="343" height="60"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MH8-ED-FVN" customClass="TPSDropDown">
+                                        <rect key="frame" x="8" y="8" width="327" height="44"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="MH8-ED-FVN" firstAttribute="top" secondItem="U82-vx-SRE" secondAttribute="top" constant="8" id="Ffw-CT-mwF"/>
+                                    <constraint firstAttribute="trailing" secondItem="MH8-ED-FVN" secondAttribute="trailing" constant="8" id="Yr3-3H-Nfa"/>
+                                    <constraint firstAttribute="height" constant="60" id="evh-b6-Ass"/>
+                                    <constraint firstAttribute="bottom" secondItem="MH8-ED-FVN" secondAttribute="bottom" constant="8" id="gCS-Ll-rLg"/>
+                                    <constraint firstItem="MH8-ED-FVN" firstAttribute="leading" secondItem="U82-vx-SRE" secondAttribute="leading" constant="8" id="gyK-WL-sWw"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="U82-vx-SRE" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" constant="16" id="4oi-mr-MtV"/>
                             <constraint firstItem="xy1-PW-lKR" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="20" id="5Af-7V-lhp"/>
+                            <constraint firstAttribute="trailing" secondItem="U82-vx-SRE" secondAttribute="trailing" constant="16" id="6jE-qp-8eZ"/>
                             <constraint firstItem="xy1-PW-lKR" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leadingMargin" id="ZiI-fS-htW"/>
+                            <constraint firstItem="U82-vx-SRE" firstAttribute="top" secondItem="xy1-PW-lKR" secondAttribute="bottom" constant="8" id="eJ5-QC-vWe"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xy1-PW-lKR" secondAttribute="trailing" id="yuE-g4-chL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oWX-41-S0W"/>
                     <connections>
                         <outlet property="dropDown" destination="m0b-no-Hj2" id="a5Y-5p-t0C"/>
+                        <outlet property="payDropDown" destination="MH8-ED-FVN" id="K9L-b7-Uk2"/>
                         <outlet property="roundDropDown" destination="pTZ-Gf-Q54" id="wbR-LX-lvT"/>
                         <outlet property="squareDropDown" destination="So2-eU-acY" id="ZZ3-SW-VLK"/>
                     </connections>
@@ -83,7 +104,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vth-xD-XMU" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="A2c-r2-vFJ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="A2c-r2-vFJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
